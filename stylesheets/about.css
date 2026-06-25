@@ -1,0 +1,465 @@
+/* ─── страница о нас ─────────────────────────────────────────────────────── */
+
+body.about-page {
+  background: #FAF9F9;
+}
+
+/* настройки блока 1 */
+
+.aboutblock1 {
+  position: relative;
+  width: 100%;
+  height: 62.5vw;
+  background: #FAF9F9;
+}
+
+/* меню */
+
+.ramka_menu_black {
+  width: 100%;
+  height: 6.39vw;
+  top: 0;
+  left: 0;
+  position: absolute;
+  object-fit: fill;
+  transform: scaleY(-1);
+}
+
+.aboutblock1 .text_meny1,
+.aboutblock1 .text_meny2,
+.aboutblock1 .text_meny3,
+.aboutblock1 .text_meny4 {
+  position: absolute;
+  top: 2.43vw;
+  color: #000000;
+  margin: 0;
+  font-family: "Inter Medium";
+  font-size: 1.25vw;
+  font-weight: 500;
+  white-space: nowrap;
+  text-transform: uppercase;
+  -webkit-text-stroke: 0;
+  filter: blur(0.05vw);
+}
+
+/* главная */
+.aboutblock1 .text_meny1 {
+  width: 5.97vw;
+  left: 34.93vw;
+}
+
+/* о нас */
+.aboutblock1 .text_meny2 {
+  width: 4.03vw;
+  left: calc(50% + 0.69vw);
+  text-align: center;
+}
+
+/* магазин */
+.aboutblock1 .text_meny3 {
+  width: 6.18vw;
+  left: 66.46vw;
+  text-align: right;
+}
+
+/* мероприятия */
+.aboutblock1 .text_meny4 {
+  width: 9.79vw;
+  left: calc(50% + 32.15vw);
+  text-align: center;
+}
+
+/* ховер — подчёркивание меню */
+
+.aboutblock1 .text_meny1::after,
+.aboutblock1 .text_meny2::after,
+.aboutblock1 .text_meny3::after,
+.aboutblock1 .text_meny4::after {
+  content: '';
+  position: absolute;
+  bottom: -0.15vw;
+  left: 0;
+  width: 0;
+  height: 0.07vw;
+  background: #000000;
+  filter: blur(0.05vw);
+  transition: width 0.5s ease;
+}
+
+.aboutblock1 .text_meny1:hover::after,
+.aboutblock1 .text_meny2:hover::after,
+.aboutblock1 .text_meny3:hover::after,
+.aboutblock1 .text_meny4:hover::after {
+  width: 100%;
+}
+
+/* буквы о н а с */
+
+.o\.about {
+  position: absolute;
+  left: 20.56%;
+  top: 8.05%;
+  width: 12.75vw;
+  object-fit: contain;
+  transform: rotate(-19.32deg);
+}
+
+.n\.about {
+  position: absolute;
+  left: 42.53%;
+  top: 7.03%;
+  width: 11.61vw;
+  object-fit: contain;
+  transform: rotate(-1.15deg);
+}
+
+.a\.about {
+  position: absolute;
+  left: 52.78%;
+  top: 7.51%;
+  width: 12.07vw;
+  object-fit: contain;
+  transform: rotate(4.59deg);
+}
+
+.s\.about {
+  position: absolute;
+  left: 64.58%;
+  top: 8.15%;
+  width: 11.28vw;
+  object-fit: contain;
+  transform: rotate(10.94deg);
+}
+
+/* квадратики */
+
+.kvadratiki_about {
+  position: absolute;
+  width: 40vw;
+  height: 10.5vw;
+  left: calc(50% - 20vw);
+  top: 41vw;
+  object-fit: fill;
+}
+
+/* текст под квадратиками */
+
+.text_about\.16 {
+  position: absolute;
+  width: 40vw;
+  left: calc(50% - 20vw);
+  top: 42.3vw;
+  font-family: "Inter Regular";
+  font-weight: 400;
+  font-size: 1.11vw;
+  line-height: 1.32vw;
+  text-align: center;
+  color: #000000;
+}
+
+/* убираем дефолтную обводку со всех ссылок на странице */
+
+.about-page a {
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+/* кнопка */
+
+.knopa_about\.18 {
+  position: absolute;
+  width: fit-content;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 47.8vw;
+  font-family: "Inter Medium";
+  font-weight: 500;
+  font-size: 1.25vw;
+  line-height: 1.53vw;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: #000000;
+  filter: blur(0.05vw);
+  cursor: pointer;
+}
+
+.knopa_about\.18::after {
+  content: '';
+  position: absolute;
+  bottom: -0.15vw;
+  left: 0;
+  width: 0;
+  height: 0.07vw;
+  background: #000000;
+  filter: blur(0.05vw);
+  transition: width 0.5s ease;
+}
+
+.knopa_about\.18:hover::after {
+  width: 100%;
+}
+
+/* ─── скрываем неготовые элементы ───────────────────────────────────────── */
+
+/* подвал */
+
+/* ─── подвал страницы о нас (инверсия главной: белое → чёрное) ──────────── */
+
+.aboutpodval {
+  position: relative;
+  width: 100%;
+  height: 61.32vw;
+  padding-bottom: 3.47vw;
+  background: #FAF9F9;
+}
+
+/* рамки */
+
+.ramka_podval_black1 {
+  width: 30.07vw;
+  height: 16.11vw;
+  top: 4.17vw;
+  left: 3.47vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+.ramka_podval_black2 {
+  width: 30.14vw;
+  height: 19.58vw;
+  top: 8.13vw;
+  left: 34.93vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+.ramka_podval_black3 {
+  width: 30.07vw;
+  height: 16.11vw;
+  top: 19.51vw;
+  left: 66.46vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+/* навигация — полные стили с чёрным текстом */
+
+.aboutpodval .text_podval_ramka1_1\.18,
+.aboutpodval .text_podval_ramka1_2\.18,
+.aboutpodval .text_podval_ramka1_3\.18,
+.aboutpodval .text_podval_ramka1_4\.18 {
+  border: none;
+  outline: none;
+  position: absolute;
+  margin: 0;
+  font-family: "Inter Medium";
+  font-size: 1.25vw;
+  font-weight: 500;
+  line-height: 1.53vw;
+  text-transform: uppercase;
+  color: #000000;
+  -webkit-text-stroke: 0;
+  filter: blur(0.05vw);
+  cursor: pointer;
+}
+
+.aboutpodval .text_podval_ramka1_1\.18 {
+  width: 5.97vw;
+  top: 5.42vw;
+  left: 5vw;
+}
+
+.aboutpodval .text_podval_ramka1_2\.18 {
+  width: 4.03vw;
+  top: 9.44vw;
+  left: 5vw;
+  text-align: center;
+}
+
+.aboutpodval .text_podval_ramka1_3\.18 {
+  width: 6.18vw;
+  top: 13.47vw;
+  left: 4.93vw;
+  text-align: right;
+}
+
+.aboutpodval .text_podval_ramka1_4\.18 {
+  width: 9.79vw;
+  top: 17.5vw;
+  left: 5vw;
+  text-align: center;
+}
+
+/* подчёркивание навигации — чёрное */
+
+.aboutpodval .text_podval_ramka1_1\.18::after,
+.aboutpodval .text_podval_ramka1_2\.18::after,
+.aboutpodval .text_podval_ramka1_3\.18::after,
+.aboutpodval .text_podval_ramka1_4\.18::after {
+  background: #000000;
+  filter: blur(0.05vw);
+}
+
+.aboutpodval .text_podval_ramka1_3\.18::after {
+  content: '';
+  position: absolute;
+  bottom: -0.15vw;
+  left: 0;
+  width: 0;
+  height: 0.07vw;
+  background: #000000;
+  filter: blur(0.05vw);
+  transition: width 0.5s ease;
+}
+
+.aboutpodval .text_podval_ramka1_3\.18:hover::after {
+  width: 100%;
+}
+
+/* превью картинки при ховере на навигацию — чёрная рамка */
+
+.aboutpodval .ani_podval1,
+.aboutpodval .ani_podval2,
+.aboutpodval .ani_podval3,
+.aboutpodval .ani_podval4 {
+  border-color: #000000;
+}
+
+/* ховер-показ картинок */
+
+.aboutpodval:has(.text_podval_ramka1_1\.18:hover) .ani_podval1 { opacity: 1; transform: translateY(0); }
+.aboutpodval:has(.text_podval_ramka1_2\.18:hover) .ani_podval2 { opacity: 1; transform: translateY(0); }
+.aboutpodval:has(.text_podval_ramka1_3\.18:hover) .ani_podval3 { opacity: 1; transform: translateY(0); }
+.aboutpodval:has(.text_podval_ramka1_4\.18:hover) .ani_podval4 { opacity: 1; transform: translateY(0); }
+
+/* тексты в рамках 2 и 3 — чёрные */
+
+.aboutpodval .text_podval_ramka2_16,
+.aboutpodval .text_podval_ramka3_16 {
+  color: #000000;
+}
+
+/* бегущая строка чёрная */
+
+.begstrock_black {
+  width: 140.49vw;
+  height: 19.58vw;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+  margin-right: 1.39vw;
+}
+
+/* бегущая строка — плашки инвертированы: чёрный фон, белый текст */
+
+.aboutpodval .beg-plashka {
+  background: rgba(0, 0, 0, 0.85);
+  border-color: #000000;
+}
+
+.aboutpodval .beg-plashka-type,
+.aboutpodval .beg-plashka-name {
+  color: #ffffff;
+}
+
+/* разделы r2–r8 скрываются через JS (.about-section без .active имеет opacity:0) */
+
+/* обе стрелки управляются через JS (.hidden класс) */
+
+/* ─── блок 2 — галерея ───────────────────────────────────────────────────── */
+
+.aboutblock2 {
+  position: relative;
+  width: 100%;
+  background: #FAF9F9;
+}
+
+/* общие стили для всех изображений галереи
+   ширина страницы: 38vw
+   высота (пропорция A4): 38 * √2 = 53.74vw
+   зазор между страницами: 1.39vw (~20px на 1440px)
+   разворот по центру: (100 - 38 - 1.39 - 38) / 2 = 11.3vw от края
+   шаг между разворотами: 53.74 + 1.39 = 55.13vw
+*/
+
+[class^="page"] {
+  position: absolute;
+  width: 38vw;
+  height: 53.74vw;
+  object-fit: cover;
+}
+
+/* левая колонка (нечётные страницы) */
+[class^="page1_"]  { left: 11.3vw; top: 0; }
+[class^="page3_"]  { left: 11.3vw; top: 55.13vw; }
+[class^="page5_"]  { left: 11.3vw; top: 110.26vw; }
+[class^="page7_"]  { left: 11.3vw; top: 165.39vw; }
+[class^="page9_"]  { left: 11.3vw; top: 220.52vw; }
+[class^="page11_"] { left: 11.3vw; top: 275.65vw; }
+
+/* правая колонка (чётные страницы) */
+[class^="page2_"]  { left: 50.69vw; top: 0; }
+[class^="page4_"]  { left: 50.69vw; top: 55.13vw; }
+[class^="page6_"]  { left: 50.69vw; top: 110.26vw; }
+[class^="page8_"]  { left: 50.69vw; top: 165.39vw; }
+[class^="page10_"] { left: 50.69vw; top: 220.52vw; }
+[class^="page12_"] { left: 50.69vw; top: 275.65vw; }
+
+/* стрелки */
+
+.knopa_strelka_left,
+.knopa_strelka_right {
+  position: absolute;
+  width: 3.13vw;
+  height: 3.13vw;
+  object-fit: contain;
+  opacity: 0.74;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity 0.3s ease;
+  transform: translateY(-50%);
+}
+
+.knopa_strelka_left  { left: 6vw; }
+.knopa_strelka_right { right: 6vw; }
+
+.knopa_strelka_left.hidden,
+.knopa_strelka_right.hidden { opacity: 0; pointer-events: none; }
+
+/* враппер секции галереи */
+.about-section {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.about-section.active {
+  pointer-events: auto;
+}
+
+/* ─── анимация появления изображений при скролле ─────────────────────────── */
+
+.about-section img {
+  transition: clip-path 0.9s cubic-bezier(0.25, 0.1, 0.25, 1),
+              transform 0.9s cubic-bezier(0.25, 0.1, 0.25, 1);
+  will-change: clip-path, transform;
+}
+
+/* анимация перехода между разделами */
+.perehod1,
+.perehod2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}

@@ -1,0 +1,745 @@
+/* настройки блок 1 */
+
+.eventsblock1 {
+  position: relative;
+  width: 100%;
+  height: 62.5vw;
+}
+
+/* меню блок 1 */
+
+.ramka_menu_white\.event {
+  width: 100%;
+  height: 6.39vw;
+  top: 0;
+  left: 0;
+  position: absolute;
+  object-fit: fill;
+}
+
+.eventsblock1 .text_meny2:nth-child(3) {
+  width: 4.03vw;
+  left: calc(50% + 0.69vw);
+  text-align: center;
+}
+
+.eventsblock1 .text_meny2:nth-child(5) {
+  width: 9.79vw;
+  left: 82.15vw;
+  text-align: center;
+}
+
+/* буквы ивенты */
+
+/* буквы ивенты */
+
+.i\.events,
+.v\.events,
+.e\.events,
+.n\.events,
+.t\.events,
+.q\.events {
+  height: 20vw;
+  width: auto;
+  top: 8vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+.i\.events {
+  left: 9vw;
+}
+
+.v\.events {
+  left: 22vw;
+}
+
+.e\.events {
+  left: 35vw;
+}
+
+.n\.events {
+  left: 47vw;
+}
+
+.t\.events {
+  left: 60vw;
+}
+
+.q\.events {
+  left: 73vw;
+}
+
+/* квадратики, текст и кнопка блок 1 */
+
+.kvadratiki_events {
+  width: 30.14vw;
+  height: 8.61vw;
+  top: 44vw;
+  left: 34.93vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+.text_events\.16 {
+  width: 25.28vw;
+  top: 44.5vw;
+  left: 37.36vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.11vw;
+  font-weight: 400;
+  line-height: 1.32vw;
+  text-align: center;
+}
+
+.knopa_events\.18 {
+  width: 12.78vw;
+  top: 50.8vw;
+  left: calc(50% - 6.39vw);
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Medium";
+  font-size: 1.25vw;
+  font-weight: 500;
+  line-height: 1.53vw;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  -webkit-text-stroke: 0.05vw white;
+  filter: blur(0.05vw);
+  cursor: pointer;
+}
+
+.knopa_events\.18::after {
+  content: '';
+  position: absolute;
+  bottom: -0.15vw;
+  left: 0;
+  width: 0;
+  height: 0.07vw;
+  background: #ffffff;
+  transition: width 0.5s ease;
+}
+
+.knopa_events\.18:hover::after {
+  width: 100%;
+}
+
+/* настройки блок 2 */
+
+.eventsblock2 {
+  position: relative;
+  width: 100%;
+  height: 64vw;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* мероприятие 1 */
+
+.event1 {
+  width: 30.07vw;
+  height: 42.96vw;
+  top: 12.5vw;
+  left: 3.47vw;
+  position: absolute;
+  object-fit: cover;
+}
+
+.text_event1\.32 {
+  width: 15.83vw;
+  top: 19.38vw;
+  left: 50.76vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 2.22vw;
+  font-weight: 400;
+  line-height: 2.71vw;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.text_event1\.1\.18 {
+  width: 9.79vw;
+  top: 26.81vw;
+  left: 50.76vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.25vw;
+  font-weight: 400;
+  line-height: 1.53vw;
+}
+
+.text_event1\.2\.18 {
+  width: 4.65vw;
+  top: 27.08vw;
+  left: 76.11vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.25vw;
+  font-weight: 400;
+  line-height: 1.53vw;
+}
+
+.text_event1\.16 {
+  width: 30.07vw;
+  top: 32.99vw;
+  left: 50.69vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.11vw;
+  font-weight: 400;
+  line-height: 1.32vw;
+}
+
+.knopa_event1\.32 {
+  width: fit-content;
+  top: 47.08vw;
+  left: 50.69vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 2.22vw;
+  font-weight: 400;
+  line-height: 2.71vw;
+  text-transform: lowercase;
+  opacity: 0.7;
+  filter: blur(0.07vw);
+  cursor: pointer;
+}
+
+/* настройки блок 3 */
+
+.eventsblock3 {
+  position: relative;
+  width: 100%;
+  height: 65vw;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* мероприятие 2 */
+
+.event2 {
+  width: 30.07vw;
+  height: 42.96vw;
+  top: 15.44vw;
+  left: 66.46vw;
+  position: absolute;
+  object-fit: cover;
+}
+
+.text_event2\.32 {
+  width: 31.39vw;
+  top: 20.38vw;
+  left: 19.31vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 2.22vw;
+  font-weight: 400;
+  line-height: 2.71vw;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.text_event2\.1\.18 {
+  width: 5.63vw;
+  top: 27.82vw;
+  left: 19.31vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.25vw;
+  font-weight: 400;
+  line-height: 1.53vw;
+}
+
+.text_event2\.2\.18 {
+  width: 3.61vw;
+  top: 28.09vw;
+  left: 45.69vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.25vw;
+  font-weight: 400;
+  line-height: 1.53vw;
+}
+
+.text_event2\.16 {
+  width: 30.07vw;
+  top: 33.99vw;
+  left: 19.24vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.11vw;
+  font-weight: 400;
+  line-height: 1.32vw;
+}
+
+.knopa_event2\.32 {
+  width: fit-content;
+  top: 48.09vw;
+  left: 19.24vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 2.22vw;
+  font-weight: 400;
+  line-height: 2.71vw;
+  text-transform: lowercase;
+  opacity: 0.7;
+  filter: blur(0.07vw);
+  cursor: pointer;
+}
+
+/* настройки блок 4 */
+
+.eventsblock4 {
+  position: relative;
+  width: 100%;
+  height: 69vw;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* мероприятие 3 */
+
+.event3 {
+  width: 30.07vw;
+  height: 42.96vw;
+  top: 17.39vw;
+  left: 3.47vw;
+  position: absolute;
+  object-fit: cover;
+}
+
+.text_event3\.32 {
+  width: 19.1vw;
+  top: 25.66vw;
+  left: 51.04vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 2.22vw;
+  font-weight: 400;
+  line-height: 2.71vw;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.text_event3\.1\.18 {
+  width: 9.79vw;
+  top: 33.08vw;
+  left: 51.04vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.25vw;
+  font-weight: 400;
+  line-height: 1.53vw;
+}
+
+.text_event3\.2\.18 {
+  width: 4.65vw;
+  top: 33.36vw;
+  left: 76.39vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.25vw;
+  font-weight: 400;
+  line-height: 1.53vw;
+}
+
+.text_event3\.16 {
+  width: 30.07vw;
+  top: 39.27vw;
+  left: 50.97vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.11vw;
+  font-weight: 400;
+  line-height: 1.32vw;
+}
+
+.knopa_event3\.32 {
+  width: fit-content;
+  top: 52.04vw;
+  left: 50.97vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 2.22vw;
+  font-weight: 400;
+  line-height: 2.71vw;
+  text-transform: lowercase;
+  opacity: 0.7;
+  filter: blur(0.07vw);
+  cursor: pointer;
+}
+
+/* ─── АНИМАЦИИ ────────────────────────────────────────────────────────────── */
+
+/* буквы — без анимации появления */
+
+/* начальное состояние — постеры (clipPath задаётся JS) */
+
+.event1,
+.event2,
+.event3 {
+  transition: transform 0.5s ease;
+}
+
+.event1:hover,
+.event2:hover,
+.event3:hover {
+  transform: scale(0.93) !important;
+}
+
+/* начальное состояние — тексты */
+
+.text_event1\.32,
+.text_event1\.1\.18,
+.text_event1\.2\.18,
+.text_event1\.16,
+.knopa_event1\.32,
+.text_event2\.32,
+.text_event2\.1\.18,
+.text_event2\.2\.18,
+.text_event2\.16,
+.knopa_event2\.32,
+.text_event3\.32,
+.text_event3\.1\.18,
+.text_event3\.2\.18,
+.text_event3\.16,
+.knopa_event3\.32 {
+  opacity: 0;
+  transform: translateY(1.5vw);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+/* активное состояние текста */
+
+.event-in-text {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* подчёркивание кнопок оставить заявку */
+
+.knopa_event1\.32,
+.knopa_event2\.32,
+.knopa_event3\.32 {
+  position: relative;
+}
+
+.knopa_event1\.32::after,
+.knopa_event2\.32::after,
+.knopa_event3\.32::after {
+  content: '';
+  position: absolute;
+  bottom: -0.15vw;
+  left: 0;
+  width: 0;
+  height: 0.07vw;
+  background: #ffffff;
+  transition: width 0.5s ease;
+}
+
+.knopa_event1\.32:hover::after,
+.knopa_event2\.32:hover::after,
+.knopa_event3\.32:hover::after {
+  width: 100%;
+}
+
+/* мероприятия в подвале — переопределение для events страницы */
+
+.mainpodval .text_podval_ramka1_3\.18:nth-child(7) {
+  width: 9.79vw;
+  height: 1.53vw;
+  top: 17.5vw;
+  left: 5vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Medium";
+  font-size: 1.25vw;
+  font-weight: 500;
+  line-height: 1.53vw;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-text-stroke: 0.05vw white;
+  filter: blur(0.05vw);
+  cursor: pointer;
+}
+
+/* попап — оверлей */
+
+.popup-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.4s ease;
+}
+
+.popup-overlay.popup-visible {
+  display: flex;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* попап — контейнер */
+
+.popup1 {
+  position: relative;
+  width: 46.94vw;
+  height: 30.85vw;
+  background: #ffffff;
+  box-shadow: 0 0.35vw 5.3vw 1.77vw rgba(255, 255, 255, 0.25);
+  opacity: 0;
+  transform: translateY(1.5vw);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.popup-overlay.popup-visible .popup1 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* внутренняя рамка */
+
+.popup1-border {
+  position: absolute;
+  left: 6.36%;
+  top: 9.0%;
+  width: 86.44%;
+  height: 82.0%;
+  border: 0.09vw solid #000000;
+  box-sizing: border-box;
+}
+
+/* угловые точки */
+
+.popup1-dot {
+  position: absolute;
+  width: 0.69vw;
+  height: 0.69vw;
+  background: #000000;
+}
+
+.popup1-dot--tl { left: 5.62%; top: 7.43%; }
+.popup1-dot--tr { left: 92.46%; top: 7.66%; }
+.popup1-dot--br { left: 92.46%; top: 89.81%; }
+.popup1-dot--bl { left: 5.62%; top: 89.81%; }
+
+/* текст заявка */
+
+.text_popup1\.32 {
+  position: absolute;
+  left: 25.44%;
+  top: 27.23%;
+  color: #000000;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 2.22vw;
+  font-weight: 400;
+  line-height: 2.71vw;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+/* текст описание */
+
+.text_popup1\.16 {
+  position: absolute;
+  left: 25.44%;
+  top: 41.64%;
+  width: 47.04%;
+  color: #000000;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.11vw;
+  font-weight: 400;
+  line-height: 1.32vw;
+}
+
+/* строка ввода */
+
+.strokavvoda_popup1 {
+  position: absolute;
+  left: 25.44%;
+  top: 64.37%;
+  width: 34.62%;
+  height: 6.75%;
+  background: #ffffff;
+  border: 0.07vw solid #000000;
+  box-sizing: border-box;
+  font-family: "Inter Regular";
+  font-size: 0.83vw;
+  font-weight: 400;
+  color: #b0b0b0;
+  padding: 0 0.56vw;
+  outline: none;
+}
+
+.strokavvoda_popup1::placeholder {
+  color: #b0b0b0;
+}
+
+/* кнопка отправить */
+
+.knopa_popup1 {
+  position: absolute;
+  left: 63.02%;
+  top: 65.32%;
+  color: #000000;
+  margin: 0;
+  font-family: "Inter Medium";
+  font-size: 1.25vw;
+  font-weight: 500;
+  line-height: 1.53vw;
+  text-align: center;
+  text-transform: uppercase;
+  filter: blur(0.05vw);
+  cursor: pointer;
+  white-space: nowrap;
+  opacity: 0.4;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.knopa_popup1.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* попап 2 — контейнер */
+
+.popup2 {
+  position: absolute;
+  width: 46.94vw;
+  height: 30.85vw;
+  background: #ffffff;
+  box-shadow: 0 0.35vw 5.3vw 1.77vw rgba(255, 255, 255, 0.25);
+  opacity: 0;
+  transform: translateY(1.5vw);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+}
+
+.popup2.popup2-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* внутренняя рамка попап 2 */
+
+.popup2-border {
+  position: absolute;
+  left: 6.78%;
+  top: 8.88%;
+  width: 86.44%;
+  height: 81.95%;
+  border: 0.09vw solid #000000;
+  box-sizing: border-box;
+}
+
+/* угловые точки попап 2 */
+
+.popup2-dot {
+  position: absolute;
+  width: 0.69vw;
+  height: 0.69vw;
+  background: #000000;
+}
+
+.popup2-dot--tl { left: 6.07%; top: 7.66%; }
+.popup2-dot--tr { left: 92.46%; top: 7.66%; }
+.popup2-dot--br { left: 92.46%; top: 89.81%; }
+.popup2-dot--bl { left: 6.07%; top: 89.81%; }
+
+/* текст попап 2 */
+
+.text_popup2\.16 {
+  position: absolute;
+  left: 23.37%;
+  top: 42.54%;
+  width: 53.1%;
+  color: #000000;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.11vw;
+  font-weight: 400;
+  line-height: 1.32vw;
+  text-align: center;
+}
+
+/* кнопка вернуться */
+
+.knopa_popup2 {
+  position: absolute;
+  left: 27.81%;
+  top: 52.45%;
+  width: 44.38%;
+  color: #000000;
+  margin: 0;
+  font-family: "Inter Medium";
+  font-size: 1.25vw;
+  font-weight: 500;
+  line-height: 1.53vw;
+  text-align: center;
+  text-transform: uppercase;
+  filter: blur(0.05vw);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.knopa_popup2 {
+  position: relative;
+}
+
+.knopa_popup2::after {
+  content: '';
+  position: absolute;
+  bottom: -0.15vw;
+  left: 0;
+  width: 0;
+  height: 0.07vw;
+  background: #000000;
+  transition: width 0.5s ease;
+}
+
+.knopa_popup2:hover::after {
+  width: 100%;
+}

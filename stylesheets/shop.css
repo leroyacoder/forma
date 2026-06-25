@@ -1,0 +1,1231 @@
+/* анимационные названия товаров — появляются при наведении */
+
+[class^="text_shop_ani"] {
+  position: absolute;
+  color: #ffffff;
+  font-family: "Inter Regular";
+  font-size: 2.22vw;
+  font-weight: 400;
+  line-height: 2.71vw;
+  text-transform: uppercase;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(1.5vw);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
+}
+[class^="text_shop_ani"].ani-hover-in {
+  opacity: 0.7;
+  transform: translateY(0);
+}
+
+.text_shop_ani1\.32  { left: 3.47vw;  width: 30.07vw; top: 27.29vw; } 
+.text_shop_ani2\.32  { left: 34.93vw; width: 30.14vw; top: 34.34vw; }
+.text_shop_ani3\.32  { left: 66.46vw; width: 30.07vw; top: 43.99vw; } 
+
+.text_shop_ani4\.32  { left: 3.47vw;  width: 30.07vw; top: 38.16vw; } 
+.text_shop_ani5\.32  { left: 34.93vw; width: 30.14vw; top: 27.16vw; } 
+.text_shop_ani6\.32  { left: 66.46vw; width: 30.07vw; top: 22.81vw; } 
+
+.text_shop_ani7\.32  { left: 3.47vw;  width: 30.07vw; top: 20.63vw; } 
+.text_shop_ani9\.32  { left: 66.46vw; width: 30.07vw; top: 37.32vw; } 
+
+.text_shop_ani10\.32 { left: 3.47vw;  width: 30.07vw; top: 36.49vw; } 
+
+[class^="blik_shop"] {
+  display: none;
+}
+
+/* настройки блок 1 */
+
+.shopblock1 {
+  position: relative;
+  width: 100%;
+  height: 56.25vw;
+  overflow: hidden;
+}
+
+/* меню блок 1 */
+
+.ramka_menu_white_shop {
+  width: 100%;
+  height: 6.39vw;
+  top: 0;
+  left: 0;
+  position: absolute;
+  object-fit: fill;
+}
+
+/* о нас */
+
+.shopblock1 .text_meny2:nth-child(3) {
+  width: 4.03vw;
+  left: calc(50% + 0.69vw);
+  text-align: center;
+}
+
+/* мероприятия */
+
+.shopblock1 .text_meny2:nth-child(5) {
+  width: 9.79vw;
+  left: 82.15vw;
+  text-align: center;
+}
+
+/* буквы магазин */
+
+.m\.shop {
+  position: absolute;
+  left: 11.18%;
+  top: 12vw;
+  width: 13.15vw;
+  height: 28vw;
+  object-fit: contain;
+  transform: rotate(-9.55deg);
+}
+
+.a\.shop {
+  position: absolute;
+  left: 23.69%;
+  top: 11.3vw;
+  width: 12.32vw;
+  height: 28vw;
+  object-fit: contain;
+  transform: rotate(-5.74deg);
+}
+
+.g\.shop {
+  position: absolute;
+  left: 34.8%;
+  top: 10.3vw;
+  width: 11.01vw;
+  height: 28vw;
+  object-fit: contain;
+  transform: rotate(-10.19deg);
+}
+
+.a2\.shop {
+  position: absolute;
+  left: 41.81%;
+  top: 10vw;
+  width: 12.66vw;
+  height: 28vw;
+  object-fit: contain;
+  transform: rotate(3.07deg);
+}
+
+.z\.shop {
+  position: absolute;
+  left: 53.74%;
+  top: 11.1vw;
+  width: 9.07vw;
+  height: 28vw;
+  object-fit: contain;
+  transform: rotate(-4.19deg);
+}
+
+.i\.shop {
+  position: absolute;
+  left: 64.58%;
+  top: 10.9vw;
+  width: 11.25vw;
+  height: 28vw;
+  object-fit: contain;
+  transform: rotate(2.55deg);
+}
+
+.n\.shop {
+  position: absolute;
+  left: 75.44%;
+  top: 12vw;
+  width: 13.22vw;
+  height: 28vw;
+  object-fit: contain;
+  transform: matrix(1, -0.01, 0.01, 1, 0, 0);
+}
+
+/* квадратики, текст и кнопка */
+
+.kvadratiki_shop {
+  position: absolute;
+  width: 30.14vw;
+  height: 7.29vw;
+  left: 35.14vw;
+  top: 45vw;
+  object-fit: contain;
+}
+
+.text_shop\.16 {
+  position: absolute;
+  width: 24.93vw;
+  height: 2.64vw;
+  left: 37.71vw;
+  top: 45.7vw;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.11vw;
+  font-weight: 400;
+  line-height: 1.32vw;
+  text-align: center;
+}
+
+.knopa_shop\.18 {
+  position: absolute;
+  width: 25.83vw;
+  height: 1.53vw;
+  left: calc(50% - 12.71vw);
+  top: 50vw;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Medium";
+  font-size: 1.25vw;
+  font-weight: 500;
+  line-height: 1.53vw;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  -webkit-text-stroke: 0.05vw white;
+  filter: blur(0.05vw);
+  cursor: pointer;
+}
+
+.knopa_shop\.18::after {
+  content: '';
+  position: absolute;
+  bottom: -0.15vw;
+  left: 0;
+  width: 0;
+  height: 0.07vw;
+  background: #ffffff;
+  filter: blur(0.05vw);
+  transition: width 0.5s ease;
+}
+
+.knopa_shop\.18:hover::after {
+  width: 100%;
+}
+
+/* настройки блок 2 */
+
+.shopblock2 {
+  position: relative;
+  width: 100%;
+  height: 65vw;
+  overflow: hidden;
+}
+
+/* блики блок 2 */
+
+.shopblock2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  box-shadow:
+    18.51vw 30vw 18vw 4vw rgba(185, 195, 210, 0.38),
+    50vw 35.7vw 18vw 4vw rgba(185, 195, 210, 0.38),
+    81.5vw 45.35vw 18vw 4vw rgba(185, 195, 210, 0.38);
+}
+
+/* рамки блок 2 */
+
+.ramka_shop1 {
+  width: 30.07vw;
+  height: 38.19vw;
+  top: 10.9vw;
+  left: 3.47vw;
+  position: absolute;
+  object-fit: fill;
+}
+
+.ramka_shop2 {
+  width: 30.14vw;
+  height: 41.67vw;
+  top: 14.86vw;
+  left: 34.93vw;
+  position: absolute;
+  object-fit: fill;
+}
+
+.ramka_shop3 {
+  width: 30.07vw;
+  height: 38.19vw;
+  top: 26.25vw;
+  left: 66.46vw;
+  position: absolute;
+  object-fit: fill;
+}
+
+/* товары блок 2 */
+
+.tovar_shop1 {
+  width: 26.28vw;
+  height: 32.85vw;
+  top: 12.64vw;
+  left: 4.86vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+.tovar_shop2 {
+  width: 20.44vw;
+  height: 19.03vw;
+  top: 25.69vw;
+  left: 39.86vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+.tovar_shop3 {
+  width: 25.14vw;
+  height: 24.78vw;
+  top: 32.99vw;
+  left: 69.7vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+/* текст товаров блок 2 */
+
+.text_shop_tovar1\.18 {
+  width: 7.01vw;
+  height: 1.53vw;
+  top: 12.64vw;
+  left: 4.86vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.25vw;
+  font-weight: 400;
+  line-height: 1.53vw;
+}
+
+.text_shop_tovar2\.18 {
+  width: 5.63vw;
+  height: 1.53vw;
+  top: 16.6vw;
+  left: 36.32vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.25vw;
+  font-weight: 400;
+  line-height: 1.53vw;
+}
+
+.text_shop_tovar3\.18 {
+  width: 6.32vw;
+  height: 1.53vw;
+  top: 27.99vw;
+  left: 67.85vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.25vw;
+  font-weight: 400;
+  line-height: 1.53vw;
+}
+
+.text_shop_tovar1\.12 {
+  width: 19.03vw;
+  height: 2.08vw;
+  top: 45.28vw;
+  left: 4.86vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 0.83vw;
+  font-weight: 400;
+  line-height: 1.04vw;
+  opacity: 0.7;
+}
+
+.text_shop_tovar2\.12 {
+  width: 10.97vw;
+  height: 1.04vw;
+  top: 53.75vw;
+  left: 36.32vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 0.83vw;
+  font-weight: 400;
+  line-height: 1.04vw;
+  opacity: 0.7;
+}
+
+.text_shop_tovar3\.12 {
+  width: 6.04vw;
+  height: 1.04vw;
+  top: 61.67vw;
+  left: 67.85vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 0.83vw;
+  font-weight: 400;
+  line-height: 1.04vw;
+  opacity: 0.7;
+}
+
+/* настройки блок 3 */
+
+.shopblock3 {
+  position: relative;
+  width: 100%;
+  height: 60vw;
+  overflow: hidden;
+}
+
+/* блики блок 3 */
+
+.shopblock3::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  box-shadow:
+    18.51vw 39.5vw 18vw 4vw rgba(185, 195, 210, 0.38),
+    50vw 29.9vw 18vw 4vw rgba(185, 195, 210, 0.38),
+    81.5vw 24.2vw 18vw 4vw rgba(185, 195, 210, 0.38);
+}
+
+/* рамки блок 3 */
+
+.ramka_shop4 {
+  width: 30.07vw;
+  height: 38.19vw;
+  top: 20.42vw;
+  left: 3.47vw;
+  position: absolute;
+  object-fit: fill;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.ramka_shop5 {
+  width: 30.14vw;
+  height: 41.67vw;
+  top: 9.03vw;
+  left: 34.93vw;
+  position: absolute;
+  object-fit: fill;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.ramka_shop6 {
+  width: 30.07vw;
+  height: 38.19vw;
+  top: 5.07vw;
+  left: 66.46vw;
+  position: absolute;
+  object-fit: fill;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+/* товары блок 3 */
+
+.tovar_shop4 {
+  width: 41.32vw;
+  height: 52.71vw;
+  top: 11.53vw;
+  left: -2.78vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+.tovar_shop5 {
+  width: 34.38vw;
+  height: 42.99vw;
+  top: 7.5vw;
+  left: 32.08vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+.tovar_shop6 {
+  width: 27.01vw;
+  height: 33.82vw;
+  top: 7.78vw;
+  left: 67.99vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+/* текст товаров блок 3 */
+
+.text_shop_tovar4\.18 {
+  width: 9.1vw;
+  height: 1.53vw;
+  top: 22.15vw;
+  left: 4.86vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.25vw;
+  font-weight: 400;
+  line-height: 1.53vw;
+}
+
+.text_shop_tovar5\.18 {
+  width: 7.01vw;
+  height: 1.53vw;
+  top: 10.76vw;
+  left: 36.32vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.25vw;
+  font-weight: 400;
+  line-height: 1.53vw;
+}
+
+.shopblock3 .text_shop_tovar6\.18 {
+  width: 5.63vw;
+  height: 1.53vw;
+  top: 6.81vw;
+  left: 67.85vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.25vw;
+  font-weight: 400;
+  line-height: 1.53vw;
+}
+
+.text_shop_tovar4\.12 {
+  width: 19.03vw;
+  height: 2.08vw;
+  top: 54.79vw;
+  left: 4.86vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 0.83vw;
+  font-weight: 400;
+  line-height: 1.04vw;
+  opacity: 0.7;
+}
+
+.text_shop_tovar5\.12 {
+  width: 19.03vw;
+  height: 1.04vw;
+  top: 47.92vw;
+  left: 36.32vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 0.83vw;
+  font-weight: 400;
+  line-height: 1.04vw;
+  opacity: 0.7;
+}
+
+.shopblock3 .text_shop_tovar6\.12 {
+  width: 19.03vw;
+  height: 1.04vw;
+  top: 40.49vw;
+  left: 67.85vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 0.83vw;
+  font-weight: 400;
+  line-height: 1.04vw;
+  opacity: 0.7;
+}
+
+/* настройки блок 4 */
+
+.shopblock4 {
+  position: relative;
+  width: 100%;
+  height: 60vw;
+  overflow: hidden;
+}
+
+/* блики блок 4 */
+
+.shopblock4::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  box-shadow:
+    18.51vw 23.3vw 18vw 4vw rgba(185, 195, 210, 0.38),
+    81.5vw 38.7vw 18vw 4vw rgba(185, 195, 210, 0.38);
+}
+
+/* рамки блок 4 */
+
+.ramka_shop7 {
+  width: 30.07vw;
+  height: 38.19vw;
+  top: 4.24vw;
+  left: 3.47vw;
+  position: absolute;
+  object-fit: fill;
+}
+
+.ramka_shop8 {
+  width: 30.14vw;
+  height: 41.67vw;
+  top: 8.19vw;
+  left: 34.93vw;
+  position: absolute;
+  object-fit: fill;
+  z-index: 2;
+}
+
+.ramka_shop9 {
+  width: 30.07vw;
+  height: 38.19vw;
+  top: 19.58vw;
+  left: 66.46vw;
+  position: absolute;
+  object-fit: fill;
+}
+
+/* товары блок 4 */
+
+.tovar_shop7 {
+  width: 38.19vw;
+  height: 47.71vw;
+  top: -1.74vw;
+  left: -1.18vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+.tovar_shop8 {
+  width: 41.53vw;
+  height: 51.94vw;
+  top: 3.54vw;
+  left: 28.54vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+.tovar_shop9 {
+  width: 49.89vw;
+  height: 62.36vw;
+  top: 18.13vw;
+  left: 48.19vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+/* текст товаров блок 4 */
+
+.text_shop_tovar7\.18 {
+  width: 5.63vw;
+  height: 1.53vw;
+  top: 5.97vw;
+  left: 4.86vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.25vw;
+  font-weight: 400;
+  line-height: 1.53vw;
+}
+
+.text_shop_tovar8\.18 {
+  width: 5.49vw;
+  height: 1.53vw;
+  top: 9.93vw;
+  left: 36.32vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.25vw;
+  font-weight: 400;
+  line-height: 1.53vw;
+}
+
+.text_shop_tovar9\.18 {
+  width: 9vw;
+  white-space: nowrap;
+  height: 1.53vw;
+  top: 21.32vw;
+  left: 67.85vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.25vw;
+  font-weight: 400;
+  line-height: 1.53vw;
+}
+
+.text_shop_tovar8\.32 {
+  width: 18.47vw;
+  height: 2.71vw;
+  top: 28.19vw;
+  left: 40.76vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 2.22vw;
+  font-weight: 400;
+  line-height: 2.71vw;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.text_shop_tovar7\.12 {
+  width: 19.03vw;
+  height: 2.08vw;
+  top: 38.61vw;
+  left: 4.86vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 0.83vw;
+  font-weight: 400;
+  line-height: 1.04vw;
+  opacity: 0.7;
+}
+
+.text_shop_tovar8\.12 {
+  width: 8.47vw;
+  height: 1.04vw;
+  top: 47.08vw;
+  left: 36.32vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 0.83vw;
+  font-weight: 400;
+  line-height: 1.04vw;
+  opacity: 0.7;
+}
+
+.text_shop_tovar9\.12 {
+  width: 15.63vw;
+  height: 2.08vw;
+  top: 53.96vw;
+  left: 67.85vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 0.83vw;
+  font-weight: 400;
+  line-height: 1.04vw;
+  opacity: 0.7;
+}
+
+/* настройки блок 5 */
+
+.shopblock5 {
+  position: relative;
+  width: 100%;
+  height: 60vw;
+  overflow: hidden;
+}
+
+/* блики блок 5 */
+
+.shopblock5::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  box-shadow:
+    18.51vw 37.8vw 18vw 4vw rgba(185, 195, 210, 0.38);
+}
+
+/* рамки блок 5 */
+
+.ramka_shop10 {
+  width: 30.07vw;
+  height: 38.19vw;
+  top: 18.75vw;
+  left: 3.47vw;
+  position: absolute;
+  object-fit: fill;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.ramka_shop11 {
+  width: 30.14vw;
+  height: 41.67vw;
+  top: 7.36vw;
+  left: 34.93vw;
+  position: absolute;
+  object-fit: fill;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  z-index: 2;
+}
+
+.ramka_shop12 {
+  width: 30.07vw;
+  height: 38.19vw;
+  top: 3.4vw;
+  left: 66.46vw;
+  position: absolute;
+  object-fit: fill;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  z-index: 2;
+}
+
+/* товары блок 5 */
+
+.tovar_shop10 {
+  width: 20.38vw;
+  height: 22.36vw;
+  top: 26.67vw;
+  left: 7.71vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+.tovar_shop11 {
+  width: 27.78vw;
+  height: 34.72vw;
+  top: 10.83vw;
+  left: 36.04vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+.tovar_shop12 {
+  width: 29.44vw;
+  height: 35.83vw;
+  top: 4.58vw;
+  left: 67.08vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+/* текст товаров блок 5 */
+
+.text_shop_tovar10\.18 {
+  width: 5.63vw;
+  height: 1.53vw;
+  top: 20.49vw;
+  left: 4.86vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.25vw;
+  font-weight: 400;
+  line-height: 1.53vw;
+}
+
+.text_shop_tovar11\.18 {
+  width: 7.01vw;
+  height: 1.53vw;
+  top: 9.1vw;
+  left: 36.32vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.25vw;
+  font-weight: 400;
+  line-height: 1.53vw;
+}
+
+.text_shop_tovar12\.18 {
+  width: 5.63vw;
+  height: 1.53vw;
+  top: 5.14vw;
+  left: 67.85vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.25vw;
+  font-weight: 400;
+  line-height: 1.53vw;
+}
+
+.text_shop_tovar11\.32 {
+  width: 18.47vw;
+  height: 2.71vw;
+  top: 26.88vw;
+  left: 40.69vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 2.22vw;
+  font-weight: 400;
+  line-height: 2.71vw;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.text_shop_tovar12\.32 {
+  width: 18.47vw;
+  height: 2.71vw;
+  top: 21.18vw;
+  left: 72.29vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 2.22vw;
+  font-weight: 400;
+  line-height: 2.71vw;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.text_shop_tovar10\.12 {
+  width: 19.03vw;
+  height: 1.04vw;
+  top: 53.13vw;
+  left: 4.86vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 0.83vw;
+  font-weight: 400;
+  line-height: 1.04vw;
+  opacity: 0.7;
+}
+
+.text_shop_tovar11\.12 {
+  width: 19.03vw;
+  height: 2.08vw;
+  top: 45.21vw;
+  left: 36.32vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 0.83vw;
+  font-weight: 400;
+  line-height: 1.04vw;
+  opacity: 0.7;
+}
+
+.text_shop_tovar12\.12 {
+  width: 19.03vw;
+  height: 1.04vw;
+  top: 38.82vw;
+  left: 67.85vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 0.83vw;
+  font-weight: 400;
+  line-height: 1.04vw;
+  opacity: 0.7;
+}
+
+/* анимация карточек */
+
+/* блики */
+.shopblock2::before, .shopblock3::before,
+.shopblock4::before, .shopblock5::before {
+  opacity: 0;
+  transition: opacity 1.4s ease;
+}
+.shop-in-blik::before {
+  opacity: 1 !important;
+}
+
+/* рамки */
+.ramka_shop1, .ramka_shop2, .ramka_shop3,
+.ramka_shop4, .ramka_shop5, .ramka_shop6,
+.ramka_shop7, .ramka_shop8, .ramka_shop9,
+.ramka_shop10, .ramka_shop11, .ramka_shop12 {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 1s ease;
+}
+
+/* товары */
+.tovar_shop1, .tovar_shop2, .tovar_shop3,
+.tovar_shop4, .tovar_shop5, .tovar_shop6,
+.tovar_shop7, .tovar_shop8, .tovar_shop9,
+.tovar_shop10, .tovar_shop11, .tovar_shop12 {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 1s ease, transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.tovar-hover-in {
+  transform: scale(1.07);
+}
+
+/* текст */
+[class^="text_shop_tovar"] {
+  opacity: 0;
+  transform: translateY(1.5vw);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+/* активные состояния */
+.shop-in-ramka {
+  clip-path: inset(0 0 0% 0) !important;
+}
+.shop-in-tovar {
+  clip-path: inset(0 0 0% 0) !important;
+}
+.shop-in-text18 {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+.shop-in-text12 {
+  opacity: 0.7 !important;
+  transform: translateY(0) !important;
+}
+.shop-fill-overlay {
+  position: absolute;
+  background: rgba(155, 155, 165, 0.30);
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 1s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+.shop-fill-overlay.shop-in-fill {
+  clip-path: inset(0 0 0% 0);
+}
+
+/* фиксированные позиции */
+.shop-fill-overlay[data-card="8"]  { width: 30.14vw; height: 41.67vw; top: 8.19vw;  left: 34.93vw; }
+.shop-fill-overlay[data-card="11"] { width: 30.14vw; height: 41.67vw; top: 7.36vw;  left: 34.93vw; }
+.shop-fill-overlay[data-card="12"] { width: 30.07vw; height: 38.19vw; top: 3.4vw;   left: 66.46vw; }
+
+/* попап */
+
+.popup {
+  position: fixed;
+  inset: 0;
+  background: #000000;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(3vw);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.popup::-webkit-scrollbar { display: none; }
+
+.popup.popup-active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+/* меню */
+.popup-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6.39vw;
+  background: #000;
+  z-index: 10000;
+}
+
+/* позиции элементов меню */
+.popup-nav .text_meny2:nth-child(3) {
+  width: 4.03vw;
+  left: calc(50% + 0.69vw);
+  text-align: center;
+}
+.popup-nav .text_meny2:nth-child(5) {
+  width: 9.79vw;
+  left: 82.15vw;
+  text-align: center;
+}
+
+/* страница контента */
+.popup-page {
+  position: relative;
+  width: 100%;
+  height: 62.5vw;
+  margin-top: 6.39vw;
+}
+
+/* стрелка назад */
+.popup-page .knopa_strelka_popup {
+  position: absolute;
+  left: 3.26vw;
+  top: 6.32vw;
+  width: 1.74vw;
+  cursor: pointer;
+}
+
+/* рамка фото */
+.popup-page .ramka_shop_popup {
+  position: absolute;
+  left: 34.93vw;
+  top: 7.85vw;
+  width: 61.53vw;
+  height: 44.58vw;
+  pointer-events: none;
+}
+
+/* фото товара */
+.popup-photo {
+  position: absolute;
+  left: 34.93vw;
+  top: 7.85vw;
+  width: 61.53vw;
+  height: 44.58vw;
+  object-fit: contain;
+  object-position: center center;
+}
+
+/* название .32 */
+.popup-pname {
+  position: absolute;
+  left: 3.33vw;
+  top: 16.94vw;
+  width: 26vw;
+  font-family: "Inter Regular";
+  font-size: 2.22vw;
+  line-height: 2.71vw;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  opacity: 0.7;
+}
+
+/* тип .18 */
+.popup-ptype {
+  position: absolute;
+  left: 3.33vw;
+  top: 22.29vw;
+  font-family: "Inter Regular";
+  font-size: 1.25vw;
+  line-height: 1.53vw;
+  color: #FFFFFF;
+}
+
+/* цена .18 */
+.popup-pprice {
+  position: absolute;
+  left: 28.75vw;
+  top: 22.01vw;
+  font-family: "Inter Regular";
+  font-size: 1.25vw;
+  line-height: 1.53vw;
+  color: #FFFFFF;
+}
+
+/* описание — абзацы с отступами */
+.popup-pdesc {
+  position: absolute;
+  left: 3.26vw;
+  top: 28.47vw;
+  width: 30.63vw;
+  font-family: "Inter Regular";
+  font-size: 1.11vw;
+  line-height: 1.32vw;
+  color: #FFFFFF;
+}
+.popup-pdesc p {
+  margin: 0 0 0.9vw 0;
+}
+.popup-pdesc p:last-child {
+  margin-bottom: 0;
+}
+
+/* кнопка корзины */
+.popup-page .knopa_shop_popup\.32 {
+  position: absolute;
+  left: 3.26vw;
+  top: 40.35vw;
+  font-family: "Inter Regular";
+  font-size: 2.22vw;
+  line-height: 2.71vw;
+  text-transform: lowercase;
+  color: #FFFFFF;
+  opacity: 0.7;
+  filter: blur(1px);
+  cursor: pointer;
+  text-decoration: none;
+  width: fit-content;
+}
+.popup-page .knopa_shop_popup\.32::after {
+  content: '';
+  position: absolute;
+  bottom: -0.15vw;
+  left: 0;
+  width: 0;
+  height: 0.07vw;
+  background: #ffffff;
+  filter: blur(0.05vw);
+  transition: width 0.5s ease;
+}
+.popup-page .knopa_shop_popup\.32:hover::after {
+  width: 100%;
+}
+
+/* ===== АНИМАЦИЯ ПОЯВЛЕНИЯ ПОПАПА ===== */
+
+/* начальные состояния */
+.popup-page .ramka_shop_popup {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 0.9s ease;
+}
+.popup-photo {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 0.9s ease 0.6s, transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.popup-pname,
+.popup-ptype,
+.popup-pprice,
+.popup-pdesc,
+.popup-page .knopa_shop_popup\.32 {
+  opacity: 0;
+  transform: translateY(1.2vw);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* активные состояния — добавляются JS при открытии */
+.popup-active .popup-page .ramka_shop_popup {
+  clip-path: inset(0 0 0% 0);
+}
+.popup-active .popup-photo {
+  clip-path: inset(0 0 0% 0);
+}
+.popup-active .popup-pname  { opacity: 0.7; transform: translateY(0); transition-delay: 1.1s; }
+.popup-active .popup-ptype  { opacity: 1;   transform: translateY(0); transition-delay: 1.3s; }
+.popup-active .popup-pprice { opacity: 1;   transform: translateY(0); transition-delay: 1.3s; }
+.popup-active .popup-pdesc  { opacity: 1;   transform: translateY(0); transition-delay: 1.5s; }
+.popup-active .popup-page .knopa_shop_popup\.32 {
+  opacity: 0.7; transform: translateY(0); transition-delay: 1.7s;
+}
+
+/* ховер на рамку — масштаб фото */
+.popup-photo:hover {
+  transform: scale(1.07);
+}

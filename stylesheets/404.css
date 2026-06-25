@@ -1,0 +1,193 @@
+/* ─── страница 404 ────────────────────────────────────────────────────────── */
+
+/* рамка меню */
+
+/* рамка меню */
+
+.ramka_menu_white_404 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6.39vw;
+  object-fit: fill;
+  transform: scaleY(-1);
+}
+
+/* курсор для меню */
+
+body.page-404 .text_meny1,
+body.page-404 .text_meny2,
+body.page-404 .text_meny3 {
+  cursor: pointer;
+}
+
+/* позиции меню для страницы 404 */
+
+/* о нас */
+body.page-404 .mainblock1 .text_meny2:nth-child(4) {
+  left: 35vw;
+  text-align: center;
+}
+
+/* главная */
+body.page-404 .text_meny1 {
+  left: 82.22vw;
+}
+
+/* магазин */
+body.page-404 .text_meny3 {
+  left: 50.69vw;
+  text-align: right;
+}
+
+/* мероприятия */
+body.page-404 .mainblock1 .text_meny2:nth-child(6) {
+  left: 66.46vw;
+  text-align: center;
+}
+
+/* фон */
+
+.main404 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56.25vw;
+  object-fit: cover;
+  object-position: 65% top;
+}
+
+/* буква О */
+
+.o\.404 {
+  position: absolute;
+  left: 12.36vw;
+  top: 20.44vw;
+  width: 13.25vw;
+  height: 17.21vw;
+  object-fit: contain;
+  transform: rotate(-5.74deg);
+}
+
+/* буква Ш */
+
+.sh\.404 {
+  position: absolute;
+  left: 26.18vw;
+  top: 19.73vw;
+  width: 14.21vw;
+  height: 17.25vw;
+  object-fit: contain;
+  transform: rotate(2.72deg);
+}
+
+/* буква И */
+
+.i\.404 {
+  position: absolute;
+  left: 41.39vw;
+  top: 16.98vw;
+  width: 12.07vw;
+  height: 20.19vw;
+  object-fit: contain;
+}
+
+/* буква Б */
+
+.b\.404 {
+  position: absolute;
+  left: 52.74vw;
+  top: 17.19vw;
+  width: 12.96vw;
+  height: 19.63vw;
+  object-fit: contain;
+  transform: rotate(6.3deg);
+}
+
+/* буква К */
+
+.k\.404 {
+  position: absolute;
+  left: 64.17vw;
+  top: 17.86vw;
+  width: 9.95vw;
+  height: 18.33vw;
+  object-fit: contain;
+  transform: rotate(15.96deg);
+}
+
+/* буква А */
+
+.a\.404 {
+  position: absolute;
+  left: 75.2vw;
+  top: 19.51vw;
+  width: 12.37vw;
+  height: 17.98vw;
+  object-fit: contain;
+  transform: rotate(7.15deg);
+}
+
+/* квадратики */
+
+.kvadratiki_404 {
+  position: absolute;
+  width: 30.14vw;
+  height: 7.29vw;
+  left: 34.93vw;
+  top: 42vw;
+  object-fit: contain;
+}
+
+/* текст ошибки */
+
+.text_404\.16 {
+  position: absolute;
+  width: 24.93vw;
+  left: 37.5vw;
+  top: 42.7vw;
+  color: #ffffff;
+  font-family: "Inter Regular";
+  font-weight: 400;
+  font-size: 1.11vw;
+  line-height: 1.32vw;
+  text-align: center;
+}
+
+/* кнопка возврата */
+
+.knopa_404\.18 {
+  position: absolute;
+  width: 17.99vw;
+  left: 41.07vw;
+  top: 47.5vw;
+  white-space: nowrap;
+  color: #ffffff;
+  font-family: "Inter Medium";
+  font-weight: 500;
+  font-size: 1.25vw;
+  line-height: 1.53vw;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-text-stroke: 0.05vw white;
+  filter: blur(0.05vw);
+  cursor: pointer;
+}
+
+.knopa_404\.18::after {
+  content: '';
+  position: absolute;
+  bottom: -0.15vw;
+  left: 0;
+  width: 0;
+  height: 0.07vw;
+  background: #ffffff;
+  filter: blur(0.05vw);
+  transition: width 0.5s ease;
+}
+
+.knopa_404\.18:hover::after {
+  width: 100%;
+}

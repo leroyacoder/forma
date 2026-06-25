@@ -1,0 +1,926 @@
+/* сброс стилей ссылок */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* настройки страницы */
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  background: #080808;
+  position: relative;
+}
+
+/* настройки блок 1 */
+
+.mainblock1 {
+  position: relative;
+  width: 100%;
+  height: 56.25vw;
+}
+
+/* меню блок 1 */
+
+.ramka_menu_white_main {
+  width: 100%;
+  height: 6.39vw;
+  top: 0;
+  left: 0;
+  position: absolute;
+  object-fit: fill;
+}
+
+.text_meny1,
+.text_meny2,
+.text_meny3 {
+  position: absolute;
+  top: 2.43vw;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Medium";
+  font-size: 1.25vw;
+  font-weight: 500;
+  white-space: nowrap;
+  text-transform: uppercase;
+  -webkit-text-stroke: 0.05vw white;
+  filter: blur(0.05vw);
+}
+
+/* главная */
+.text_meny1 {
+  width: 5.97vw;
+  left: 34.93vw;
+}
+
+/* о нас */
+.mainblock1 .text_meny2:nth-child(3) {
+  width: 4.03vw;
+  left: calc(50% + 0.69vw);
+  text-align: center;
+}
+
+/* магазин */
+.text_meny3 {
+  width: 6.18vw;
+  left: 66.46vw;
+  text-align: right;
+}
+
+/* мероприятия */
+.mainblock1 .text_meny2:nth-child(5) {
+  width: 9.79vw;
+  left: 82.15vw;
+  text-align: center;
+}
+
+/* подчёркивание меню */
+
+.text_meny1::after,
+.text_meny2::after,
+.text_meny3::after {
+  content: '';
+  position: absolute;
+  bottom: -0.15vw;
+  left: 0;
+  width: 0;
+  height: 0.07vw;
+  background: #ffffff;
+  filter: blur(0.05vw);
+  transition: width 0.5s ease;
+}
+
+.text_meny1:hover::after,
+.text_meny2:hover::after,
+.text_meny3:hover::after {
+  width: 100%;
+}
+
+/* буквы форма */
+
+.f {
+  width: 16.88vw;
+  height: 26vw;
+  top: 12vw;
+  left: 17vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+.o {
+  width: 13.99vw;
+  height: 24vw;
+  top: 12vw;
+  left: 33.46vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+.r {
+  width: 10.7vw;
+  height: 25vw;
+  top: 11.5vw;
+  left: 47.62vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+.m {
+  width: 14.21vw;
+  height: 25vw;
+  top: 12vw;
+  left: 58.53vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+.a {
+  width: 12.59vw;
+  height: 26vw;
+  top: 12vw;
+  left: 70.12vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+/* квадратики, текст и кнопка на главной */
+
+.kvadratiki_main {
+  position: absolute;
+  width: 30.14vw;
+  height: 8.61vw;
+  left: 34.93vw;
+  top: 42vw;
+  object-fit: contain;
+}
+
+.text_main\.16 {
+  position: absolute;
+  width: 24.93vw;
+  left: 37.5vw;
+  top: 43.5vw;
+  color: #ffffff;
+  font-family: "Inter Regular";
+  font-weight: 400;
+  font-size: 1.11vw;
+  line-height: 1.32vw;
+  text-align: center;
+}
+
+.knopa_main\.18 {
+  position: absolute;
+  width: 13.82vw;
+  left: 42vw;
+  top: 49vw;
+  white-space: nowrap;
+  color: #ffffff;
+  font-family: "Inter Medium";
+  font-weight: 500;
+  font-size: 1.25vw;
+  line-height: 1.53vw;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-text-stroke: 0.05vw white;
+  filter: blur(0.05vw);
+  cursor: pointer;
+}
+
+.knopa_main\.18::after {
+  content: '';
+  position: absolute;
+  bottom: -0.15vw;
+  left: 0;
+  width: 0;
+  height: 0.07vw;
+  background: #ffffff;
+  filter: blur(0.05vw);
+  transition: width 0.5s ease;
+}
+
+.knopa_main\.18:hover::after {
+  width: 100%;
+}
+
+/* три блока как один экран */
+
+.lipkiy-wrapper {
+  position: relative;
+  height: 500vh;
+}
+
+.lipkiy-container {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.kontент2,
+.kontент3,
+.kontент4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+/* настройки блок 2 */
+
+.mainblock2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #080808;
+  opacity: 1;
+  transform: translateY(calc(50vh - 21vw));
+}
+
+/* настройки элементов блок 2 */
+
+.preview_about {
+  width: 30.14vw;
+  height: 20.14vw;
+  top: 5vw;
+  left: 34.93vw;
+  position: absolute;
+  object-fit: cover;
+  border: 0.07vw solid #ffffff;
+  z-index: 2;
+}
+
+.kvadratiki_preview_about {
+  width: 30.07vw;
+  height: 7.36vw;
+  top: 30.76vw;
+  left: 35.35vw;
+  position: absolute;
+  object-fit: contain;
+  z-index: 2;
+}
+
+/* screen blending для всех декор-изображений */
+[class^="decor_"] { mix-blend-mode: lighten; }
+
+/* большой левый декор */
+.decor_about1 {
+  width: 10.21vw;
+  height: 13.75vw;
+  top: 0;
+  left: 15.97vw;
+  position: absolute;
+  object-fit: contain;
+  z-index: 1;
+}
+
+/* маленький левый декор */
+.decor_about2 {
+  width: 7.19vw;
+  height: 7.49vw;
+  top: 13.75vw;
+  left: 25.07vw;
+  position: absolute;
+  object-fit: contain;
+  transform: rotate(3.74deg);
+  z-index: 1;
+}
+
+/* маленький правый декор */
+.decor_about3 {
+  width: 7.21vw;
+  height: 7.21vw;
+  top: 10.63vw;
+  left: 65.76vw;
+  position: absolute;
+  object-fit: contain;
+  transform: rotate(-11.92deg);
+  z-index: 1;
+}
+
+/* большой правый декор */
+.decor_about4 {
+  width: 17.71vw;
+  height: 22.22vw;
+  top: 11.88vw;
+  left: 68.06vw;
+  position: absolute;
+  object-fit: contain;
+  z-index: 1;
+}
+
+/* настройки текста блок 2 */
+
+.text_preview_about\.16 {
+  width: 25.28vw;
+  height: 2.64vw;
+  top: 31.46vw;
+  left: 37.36vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.11vw;
+  font-weight: 400;
+  line-height: 1.32vw;
+  text-align: center;
+  z-index: 2;
+}
+
+.knopa_preview_about\.18 {
+  width: 5.63vw;
+  height: 1.53vw;
+  top: 35.83vw;
+  left: 47.57vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Medium";
+  font-size: 1.25vw;
+  font-weight: 500;
+  line-height: 1.53vw;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  -webkit-text-stroke: 0.05vw white;
+  filter: blur(0.05vw);
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* настройки блок 3 */
+
+.mainblock3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #080808;
+  opacity: 0;
+  transform: translateY(calc(50vh - 24vw));
+}
+
+/* настройки элементов блок 3 */
+
+.preview_shop {
+  width: 30.14vw;
+  height: 20.14vw;
+  top: 7.99vw;
+  left: 35.42vw;
+  position: absolute;
+  object-fit: cover;
+  border: 0.07vw solid #ffffff;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  z-index: 2;
+}
+
+.kvadratiki_preview_shop {
+  width: 30.07vw;
+  height: 7.29vw;
+  top: 33.75vw;
+  left: 35.35vw;
+  position: absolute;
+  object-fit: contain;
+  z-index: 2;
+}
+
+/* большой левый декор */
+.decor_shop1 {
+  width: 15.99vw;
+  height: 19.99vw;
+  top: 0;
+  left: 13.19vw;
+  position: absolute;
+  object-fit: contain;
+  opacity: 0.7;
+  transform: rotate(14.04deg);
+  z-index: 1;
+}
+
+/* маленький левый декор */
+.decor_shop2 {
+  width: 7.64vw;
+  height: 5.70vw;
+  top: 16.53vw;
+  left: 25.14vw;
+  position: absolute;
+  object-fit: contain;
+  transform: rotate(-24.35deg);
+  z-index: 1;
+}
+
+/* маленький правый декор */
+.decor_shop3 {
+  width: 8.40vw;
+  height: 9.23vw;
+  top: 14.06vw;
+  left: 66.21vw;
+  position: absolute;
+  object-fit: contain;
+  z-index: 1;
+}
+
+/* большой правый декор */
+.decor_shop4 {
+  width: 14.79vw;
+  height: 18.47vw;
+  top: 18.68vw;
+  left: 70.42vw;
+  position: absolute;
+  object-fit: contain;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+/* настройки текста блок 3 */
+
+.text_preview_shop\.16 {
+  width: 25.28vw;
+  height: 2.64vw;
+  top: 34.44vw;
+  left: 37.71vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.11vw;
+  font-weight: 400;
+  line-height: 1.32vw;
+  text-align: center;
+  z-index: 2;
+}
+
+.knopa_preview_shop\.18 {
+  width: 7.78vw;
+  height: 1.53vw;
+  top: 38.82vw;
+  left: 46.81vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Medium";
+  font-size: 1.25vw;
+  font-weight: 500;
+  line-height: 1.53vw;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  -webkit-text-stroke: 0.05vw white;
+  filter: blur(0.05vw);
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* настройки блок 4 */
+
+.mainblock4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #080808;
+  opacity: 0;
+  transform: translateY(calc(50vh - 24.5vw));
+}
+
+/* настройки элементов блок 4 */
+
+.preview_ivents {
+  width: 30.14vw;
+  height: 20.14vw;
+  top: 8.47vw;
+  left: 35.42vw;
+  position: absolute;
+  object-fit: cover;
+  border: 0.07vw solid #ffffff;
+  z-index: 2;
+}
+
+.kvadratiki_preview_ivents {
+  width: 30.21vw;
+  height: 7.29vw;
+  top: 34.24vw;
+  left: 35.35vw;
+  position: absolute;
+  object-fit: contain;
+  z-index: 2;
+}
+
+/* большой левый декор */
+.decor_ivents1 {
+  width: 16.74vw;
+  height: 22.54vw;
+  top: 0;
+  left: 15.97vw;
+  position: absolute;
+  object-fit: contain;
+  z-index: 1;
+}
+
+/* маленький левый декор */
+.decor_ivents2 {
+  width: 7.36vw;
+  height: 7.71vw;
+  top: 18.75vw;
+  left: 27.50vw;
+  position: absolute;
+  object-fit: contain;
+  z-index: 1;
+}
+
+/* маленький правый декор */
+.decor_ivents3 {
+  width: 7.71vw;
+  height: 6.63vw;
+  top: 15.90vw;
+  left: 66.04vw;
+  position: absolute;
+  object-fit: contain;
+  transform: rotate(-15.18deg);
+  z-index: 1;
+}
+
+/* большой правый декор */
+.decor_ivents4 {
+  width: 18.54vw;
+  height: 23.19vw;
+  top: 16.81vw;
+  left: 65.07vw;
+  position: absolute;
+  object-fit: contain;
+  transform: rotate(5.4deg);
+  z-index: 1;
+}
+
+/* настройки текста блок 4 */
+
+.text_preview_ivents\.16 {
+  width: 25.28vw;
+  height: 2.64vw;
+  top: 34.93vw;
+  left: 37.71vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.11vw;
+  font-weight: 400;
+  line-height: 1.32vw;
+  text-align: center;
+  z-index: 2;
+}
+
+.knopa_preview_ivents\.18 {
+  width: 11.39vw;
+  height: 1.53vw;
+  top: 39.31vw;
+  left: 45vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Medium";
+  font-size: 1.25vw;
+  font-weight: 500;
+  line-height: 1.53vw;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  -webkit-text-stroke: 0.05vw white;
+  filter: blur(0.05vw);
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* настройки подвал */
+
+.mainpodval {
+  position: relative;
+  width: 100%;
+  height: 61.32vw;
+  padding-bottom: 3.47vw;
+  overflow: hidden;
+}
+
+/* рамки подвала */
+
+.ramka_podval1 {
+  width: 30.07vw;
+  height: 16.11vw;
+  top: 4.17vw;
+  left: 3.47vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+.ramka_podval2 {
+  width: 30.14vw;
+  height: 19.58vw;
+  top: 8.13vw;
+  left: 34.93vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+.ramka_podval3 {
+  width: 30.07vw;
+  height: 16.11vw;
+  top: 19.51vw;
+  left: 66.46vw;
+  position: absolute;
+  object-fit: contain;
+}
+
+/* текст в рамке 1 */
+
+.text_podval_ramka1_1\.18 {
+  width: 5.97vw;
+  height: 1.53vw;
+  top: 5.42vw;
+  left: 5vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Medium";
+  font-size: 1.25vw;
+  font-weight: 500;
+  line-height: 1.53vw;
+  text-transform: uppercase;
+  -webkit-text-stroke: 0.05vw white;
+  filter: blur(0.05vw);
+}
+
+.text_podval_ramka1_2\.18 {
+  width: 4.03vw;
+  height: 1.53vw;
+  top: 9.44vw;
+  left: 5vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Medium";
+  font-size: 1.25vw;
+  font-weight: 500;
+  line-height: 1.53vw;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-text-stroke: 0.05vw white;
+  filter: blur(0.05vw);
+}
+
+/* магазин */
+.mainpodval .text_podval_ramka1_3\.18:nth-child(6) {
+  width: 6.18vw;
+  height: 1.53vw;
+  top: 13.47vw;
+  left: 4.93vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Medium";
+  font-size: 1.25vw;
+  font-weight: 500;
+  line-height: 1.53vw;
+  text-align: right;
+  text-transform: uppercase;
+  -webkit-text-stroke: 0.05vw white;
+  filter: blur(0.05vw);
+}
+
+/* мероприятия */
+.text_podval_ramka1_4\.18 {
+  width: 9.79vw;
+  height: 1.53vw;
+  top: 17.5vw;
+  left: 5vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Medium";
+  font-size: 1.25vw;
+  font-weight: 500;
+  line-height: 1.53vw;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-text-stroke: 0.05vw white;
+  filter: blur(0.05vw);
+}
+
+/* анимация подвала */
+
+.ani_podval1,
+.ani_podval2,
+.ani_podval3,
+.ani_podval4 {
+  width: 7.43vw;
+  height: 9.38vw;
+  left: 24.58vw;
+  position: absolute;
+  object-fit: cover;
+  border: 0.07vw solid #ffffff;
+  opacity: 0;
+  transform: translateY(1.5vw);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.ani_podval1 { top: 1.5vw; }
+.ani_podval2 { top: 5.5vw; }
+.ani_podval3 { top: 9.5vw; }
+.ani_podval4 { top: 13.5vw; }
+
+/* текст в рамке 2 */
+
+.text_podval_ramka2_16 {
+  width: 18.96vw;
+  height: 9.24vw;
+  top: 9.86vw;
+  left: 36.32vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.11vw;
+  font-weight: 400;
+  line-height: 1.32vw;
+}
+
+/* текст в рамке 3 */
+
+.text_podval_ramka3_16 {
+  width: 17.43vw;
+  height: 3.96vw;
+  top: 21.25vw;
+  left: 67.85vw;
+  position: absolute;
+  color: #ffffff;
+  margin: 0;
+  font-family: "Inter Regular";
+  font-size: 1.11vw;
+  font-weight: 400;
+  line-height: 1.32vw;
+}
+
+/* бегущая строка */
+
+.begstrock-track {
+  position: absolute;
+  top: 41.74vw;
+  left: 0;
+  display: flex;
+  animation: прокрутка 14s linear infinite;
+}
+
+.begstrock {
+  width: 140.49vw;
+  height: 19.58vw;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+  margin-right: 1.39vw; 
+}
+
+@keyframes прокрутка {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-141.88vw); } 
+}
+
+/* зоны наведения в бегущей строке */
+
+.beg-hz {
+  position: absolute;
+  top: 0;
+  width: 14.375vw;
+  height: 19.58vw;
+  cursor: pointer;
+}
+
+.beg-plashka {
+  position: absolute;
+  bottom: -1.39vw;
+  left: 6.04vw;
+  width: 12.15vw;
+  height: 5.56vw;
+  background: rgba(255, 255, 255, 0.8);
+  border: 0.07vw solid #ffffff;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(1.5vw);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+  pointer-events: none;
+}
+
+.beg-hz:hover .beg-plashka {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* маленький текст на плашках */
+.beg-plashka-type {
+  position: absolute;
+  right: 0.42vw;
+  top: 0.56vw;
+  font-family: "Inter Regular";
+  font-weight: 400;
+  font-size: 0.83vw;
+  line-height: 1.04vw;
+  color: #000000;
+  opacity: 0;
+  transform: translateY(1vw);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  transition-delay: 0.2s;
+}
+
+/* название */
+
+.beg-plashka-name {
+  position: absolute;
+  left: 0.42vw;
+  bottom: 0.56vw;
+  width: 11.46vw;
+  font-family: "Inter Medium";
+  font-weight: 500;
+  font-size: 1.25vw;
+  line-height: 1.53vw;
+  text-transform: uppercase;
+  color: #000000;
+  opacity: 0;
+  transform: translateY(1.5vw);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  transition-delay: 0.3s;
+}
+
+.beg-hz:hover .beg-plashka-type,
+.beg-hz:hover .beg-plashka-name {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[class*="ani_ramka_podval"],
+[class*="text_ani_ramka_podval"] {
+  display: none;
+}
+
+/* подчёркивание кнопок секций */
+
+.knopa_preview_about\.18::after,
+.knopa_preview_shop\.18::after,
+.knopa_preview_ivents\.18::after {
+  content: '';
+  position: absolute;
+  bottom: -0.15vw;
+  left: 0;
+  width: 0;
+  height: 0.07vw;
+  background: #ffffff;
+  filter: blur(0.05vw);
+  transition: width 0.5s ease;
+}
+
+.knopa_preview_about\.18:hover::after,
+.knopa_preview_shop\.18:hover::after,
+.knopa_preview_ivents\.18:hover::after {
+  width: 100%;
+}
+
+/* подчёркивание навигации подвала */
+
+.text_podval_ramka1_1\.18,
+.text_podval_ramka1_2\.18,
+.mainpodval .text_podval_ramka1_3\.18,
+.text_podval_ramka1_4\.18 {
+  cursor: pointer;
+}
+
+.text_podval_ramka1_1\.18::after,
+.text_podval_ramka1_2\.18::after,
+.mainpodval .text_podval_ramka1_3\.18::after,
+.text_podval_ramka1_4\.18::after {
+  content: '';
+  position: absolute;
+  bottom: -0.15vw;
+  left: 0;
+  width: 0;
+  height: 0.07vw;
+  background: #ffffff;
+  filter: blur(0.05vw);
+  transition: width 0.5s ease;
+}
+
+.text_podval_ramka1_1\.18:hover::after,
+.text_podval_ramka1_2\.18:hover::after,
+.mainpodval .text_podval_ramka1_3\.18:hover::after,
+.text_podval_ramka1_4\.18:hover::after {
+  width: 100%;
+}
+
+/* показ плашки при наведении на подвал */
+
+.mainpodval:has(.text_podval_ramka1_1\.18:hover) .ani_podval1 { opacity: 1; transform: translateY(0); }
+.mainpodval:has(.text_podval_ramka1_2\.18:hover) .ani_podval2 { opacity: 1; transform: translateY(0); }
+.mainpodval:has(.text_podval_ramka1_3\.18:hover) .ani_podval3 { opacity: 1; transform: translateY(0); }
+.mainpodval:has(.text_podval_ramka1_4\.18:hover) .ani_podval4 { opacity: 1; transform: translateY(0); }
