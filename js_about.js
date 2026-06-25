@@ -241,46 +241,46 @@
 
     if (window.playSound) window.playSound('perehod');
 
-    // шаг 1: появляется perehod1 (тёмный блум)
-    if (p1) { p1.style.pointerEvents = 'auto'; p1.style.opacity = '1'; }
+    // шаг 1: iris открывается — круг расширяется из центра
+    if (p2) {
+      p2.style.pointerEvents = 'auto';
+      p2.style.transition = 'clip-path 0.65s cubic-bezier(0.4, 0, 0.6, 1)';
+      p2.style.clipPath = 'circle(150% at 50% 50%)';
+    }
 
     setTimeout(function () {
-      // шаг 2: crossfade perehod1 → perehod2 (светлый пик)
-      if (p1) p1.style.opacity = '0';
-      if (p2) { p2.style.pointerEvents = 'auto'; p2.style.opacity = '1'; }
+      // пик — переключаем секцию
+      var prev = sections[current];
+      resetSection(prev);
+      prev.classList.remove('active');
+      prev.style.display = 'none';
+
+      current = index;
+      var next = sections[current];
+      next.style.display = '';
+      next.classList.add('active');
+
+      next.querySelectorAll('img').forEach(function (img) { imgSoundPlayed.delete(img); });
+
+      updateHeight();
+      updateArrows();
+
+      var pageRowH = 0.5513 * window.innerWidth;
+      var block2top = block2.getBoundingClientRect().top + window.scrollY;
+      var scrollPos = block2top + Math.max(0, pageRowH - window.innerHeight + 40);
+      window.scrollTo({ top: scrollPos, behavior: 'instant' });
+
+      // шаг 2: iris закрывается — круг сжимается
+      if (p2) {
+        p2.style.transition = 'clip-path 0.65s cubic-bezier(0.4, 0, 0.2, 1)';
+        p2.style.clipPath = 'circle(0% at 50% 50%)';
+      }
 
       setTimeout(function () {
-        // пик — переключаем секцию
-        var prev = sections[current];
-        resetSection(prev);
-        prev.classList.remove('active');
-        prev.style.display = 'none';
-
-        current = index;
-        var next = sections[current];
-        next.style.display = '';
-        next.classList.add('active');
-
-        next.querySelectorAll('img').forEach(function (img) { imgSoundPlayed.delete(img); });
-
-        updateHeight();
-        updateArrows();
-
-        var pageRowH = 0.5513 * window.innerWidth;
-        var block2top = block2.getBoundingClientRect().top + window.scrollY;
-        var scrollPos = block2top + Math.max(0, pageRowH - window.innerHeight + 40);
-        window.scrollTo({ top: scrollPos, behavior: 'instant' });
-
-        // шаг 3: perehod2 уходит
-        if (p2) p2.style.opacity = '0';
-
-        setTimeout(function () {
-          if (p1) p1.style.pointerEvents = 'none';
-          if (p2) p2.style.pointerEvents = 'none';
-          navigating = false;
-        }, 320);
-      }, 320);
-    }, 300);
+        if (p2) p2.style.pointerEvents = 'none';
+        navigating = false;
+      }, 680);
+    }, 680);
   }
 
   sections[0].classList.add('active');
