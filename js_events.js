@@ -124,14 +124,14 @@
 (function () {
 
   var navItems = [
-    { sel: '.text_meny1', href: './main.html' },
+    { sel: '.text_meny1', href: './index.html' },
     { sel: '.eventsblock1 .text_meny2:nth-child(3)', href: './about.html' },
     { sel: '.text_meny3', href: './shop.html' },
     { sel: '.eventsblock1 .text_meny2:nth-child(5)', href: './events.html' },
   ];
 
   var podvalItems = [
-    { sel: '.mainpodval .text_podval_ramka1_1\\.18', href: './main.html' },
+    { sel: '.mainpodval .text_podval_ramka1_1\\.18', href: './index.html' },
     { sel: '.mainpodval .text_podval_ramka1_2\\.18', href: './about.html' },
     { sel: '.mainpodval .text_podval_ramka1_3\\.18:nth-child(6)', href: './shop.html' },
     { sel: '.mainpodval .text_podval_ramka1_3\\.18:nth-child(7)', href: './events.html' },
