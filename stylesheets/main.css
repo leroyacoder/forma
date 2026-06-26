@@ -105,7 +105,8 @@ body {
 
 .text_meny1,
 .text_meny2,
-.text_meny3 {
+.text_meny3,
+.text_meny4 {
   position: absolute;
   top: 2.43vw;
   color: #ffffff;
@@ -117,6 +118,7 @@ body {
   text-transform: uppercase;
   -webkit-text-stroke: 0.05vw white;
   filter: blur(0.05vw);
+  z-index: 10;
 }
 
 /* главная */
@@ -126,7 +128,7 @@ body {
 }
 
 /* о нас */
-.mainblock1 .text_meny2:nth-child(3) {
+.text_meny2 {
   width: 4.03vw;
   left: calc(50% + 0.69vw);
   text-align: center;
@@ -140,7 +142,7 @@ body {
 }
 
 /* мероприятия */
-.mainblock1 .text_meny2:nth-child(5) {
+.text_meny4 {
   width: 9.79vw;
   left: 82.15vw;
   text-align: center;
@@ -150,7 +152,8 @@ body {
 
 .text_meny1::after,
 .text_meny2::after,
-.text_meny3::after {
+.text_meny3::after,
+.text_meny4::after {
   content: '';
   position: absolute;
   bottom: -0.15vw;
@@ -164,7 +167,8 @@ body {
 
 .text_meny1:hover::after,
 .text_meny2:hover::after,
-.text_meny3:hover::after {
+.text_meny3:hover::after,
+.text_meny4:hover::after {
   width: 100%;
 }
 
@@ -175,7 +179,7 @@ body {
   width: 67.54vw;
   height: 25.75vw;
   left: 15vw;
-  top: 20.14vw;
+  top: 9vw;
   object-fit: contain;
 }
 
@@ -713,6 +717,29 @@ body {
   left: 66.46vw;
   position: absolute;
   object-fit: contain;
+}
+
+/* анимация появления рамок и текста подвала */
+
+.ramka_podval1, .ramka_podval2, .ramka_podval3,
+.ramka_podval_black1, .ramka_podval_black2, .ramka_podval_black3 {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 1s ease;
+}
+
+.podval-in-ramka {
+  clip-path: inset(0 0 0% 0) !important;
+}
+
+[class*="text_podval_ramka"] {
+  opacity: 0;
+  transform: translateY(1vw);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.podval-in-text {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 
 /* текст в рамке 1 */

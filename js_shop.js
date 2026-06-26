@@ -43,6 +43,17 @@
 
 })();
 
+// клик на буквы — скролл к следующему блоку
+
+(function () {
+  var bykvi = document.querySelector('.shop_bykvi');
+  var target = document.querySelector('.shopblock2');
+  if (!bykvi || !target) return;
+  bykvi.addEventListener('click', function () {
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+})();
+
 // анимация карточек товаров
 
 (function () {

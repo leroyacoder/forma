@@ -66,6 +66,12 @@
 
 .shop_bykvi {
   z-index: 1;
+  cursor: pointer;
+  transition: opacity 0.9s ease, filter 0.9s ease, transform 0.9s ease;
+}
+
+.shop_bykvi:hover {
+  transform: scale(1.04);
 }
 
 /* ===== АНИМАЦИЯ ПЕРВОГО ЭКРАНА ===== */
@@ -107,9 +113,34 @@
   filter: blur(0px) brightness(0) invert(1);
   transform: scale(1);
 }
+.shop_bykvi.shop1-in:hover {
+  transform: scale(1.04);
+}
 
 /* меню блок 1 */
 
+.logo_shop {
+  position: absolute;
+  width: 59.62px;
+  height: 67px;
+  left: 1.39vw;
+  top: 0.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.logo_shop img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.logo_shop:hover {
+  transform: scale(1.12);
+}
 
 /* о нас */
 

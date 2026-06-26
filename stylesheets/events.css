@@ -32,13 +32,21 @@
 
 /* ===== АНИМАЦИЯ ПЕРВОГО ЭКРАНА ===== */
 
-/* буквы — шторка снизу */
+/* буквы — появление через blur */
 .events_bykvi {
-  clip-path: inset(0 0 100% 0);
-  transition: clip-path 1s ease;
+  opacity: 0;
+  filter: blur(18px) brightness(0) invert(1);
+  transform: scale(1.12);
+  cursor: pointer;
+  transition: opacity 0.9s ease, filter 0.9s ease, transform 0.9s ease;
 }
 .events_bykvi.events1-in {
-  clip-path: inset(0 0 0% 0);
+  opacity: 1;
+  filter: blur(0px) brightness(0) invert(1);
+  transform: scale(1);
+}
+.events_bykvi.events1-in:hover {
+  transform: scale(1.04);
 }
 
 /* квадратики — шторка снизу */

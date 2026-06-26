@@ -1,4 +1,56 @@
-// кнопка узнать наше видение
+// анимация первого экрана о нас
+
+(function () {
+
+  var bykvi = document.querySelector('.about_bykvi');
+  var kv    = document.querySelector('.kvadratiki_about');
+  var txt   = document.getElementsByClassName('text_about.16')[0];
+  var knopa = document.getElementsByClassName('knopa_about.18')[0];
+
+  // парение букв
+  if (bykvi) {
+    (function () {
+      var phY = 0.4, phX = 1.2, phR = 0.8;
+      function tick() {
+        var t = Date.now() * 0.00072;
+        var y = Math.sin(t * 0.65 + phY) * 18;
+        var x = Math.cos(t * 0.41 + phX) * 8;
+        var r = Math.sin(t * 0.28 + phR) * 2.5;
+        bykvi.style.translate = x.toFixed(2) + 'px ' + y.toFixed(2) + 'px';
+        bykvi.style.rotate    = r.toFixed(2) + 'deg';
+        requestAnimationFrame(tick);
+      }
+      tick();
+    })();
+  }
+
+  function runEntrance() {
+    if (bykvi) setTimeout(function () { bykvi.classList.add('about1-in'); }, 100);
+    if (kv)    setTimeout(function () { kv.classList.add('about1-in'); if (window.playSound) window.playSound('plashki'); }, 1100);
+    if (txt)   setTimeout(function () { txt.classList.add('about1-in'); if (window.playSound) window.playSound('tekst'); }, 1500);
+    if (knopa) setTimeout(function () { knopa.classList.add('about1-in'); }, 1800);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', runEntrance);
+  } else {
+    runEntrance();
+  }
+
+})();
+
+// клик на буквы о нас — скролл к следующему блоку
+
+(function () {
+  var bykvi = document.querySelector('.about_bykvi');
+  var target = document.querySelector('.aboutblock2');
+  if (!bykvi || !target) return;
+  bykvi.addEventListener('click', function () {
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+})();
+
+// кнопка [ ПРОЧИТАТЬ КНИГУ ] — скролл к следующему блоку
 
 (function () {
   var btn = document.querySelector('.knopa_about\\.18');
@@ -328,9 +380,11 @@
 
   function tick() {
     var t   = Date.now() * 0.00072;
-    var y   = Math.sin(t * 0.75)  * 22;
-    var x   = Math.cos(t * 0.47)  *  9;
-    var rot = Math.sin(t * 0.31)  *  3.5;
+    var y   = Math.sin(t * 0.75) * 22;
+    var x   = Math.cos(t * 0.47) *  9;
+    var rot = Math.sin(t * 0.31) *  3.5;
+    // используем translate/rotate (CSS Individual Transform Properties)
+    // они не конфликтуют с transform: scale() из анимации появления
     letters.style.translate = x.toFixed(1) + 'px ' + y.toFixed(1) + 'px';
     letters.style.rotate    = rot.toFixed(2) + 'deg';
     requestAnimationFrame(tick);
@@ -360,18 +414,25 @@
     return els;
   });
 
-  var observer = new IntersectionObserver(function (entries) {
-    if (!entries[0].isIntersecting) return;
-    elements.forEach(function (el, i) {
-      setTimeout(function () { el.classList.add('podval-in-ramka'); }, i * 200);
-      var texts = textGroups[i] || [];
-      texts.forEach(function (txt) {
-        setTimeout(function () { txt.classList.add('podval-in-text'); }, i * 200 + 600);
-      });
-    });
-    observer.disconnect();
-  }, { threshold: 0.15 });
+  var section = elements[0].closest('section') || elements[0];
+  var done = false;
 
-  observer.observe(elements[0].closest('section') || elements[0]);
+  function animate() {
+    if (done) return;
+    var rect = section.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.92) {
+      done = true;
+      window.removeEventListener('scroll', animate);
+      elements.forEach(function (el, i) {
+        setTimeout(function () { el.classList.add('podval-in-ramka'); }, i * 200);
+        textGroups[i].forEach(function (txt) {
+          setTimeout(function () { txt.classList.add('podval-in-text'); }, i * 200 + 600);
+        });
+      });
+    }
+  }
+
+  window.addEventListener('scroll', animate, { passive: true });
+  animate();
 })();
 

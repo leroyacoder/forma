@@ -361,17 +361,24 @@
     return els;
   });
 
-  var observer = new IntersectionObserver(function (entries) {
-    if (!entries[0].isIntersecting) return;
-    elements.forEach(function (el, i) {
-      setTimeout(function () { el.classList.add('podval-in-ramka'); }, i * 200);
-      var texts = textGroups[i] || [];
-      texts.forEach(function (txt) {
-        setTimeout(function () { txt.classList.add('podval-in-text'); }, i * 200 + 600);
-      });
-    });
-    observer.disconnect();
-  }, { threshold: 0.15 });
+  var section = elements[0].closest('section') || elements[0];
+  var done = false;
 
-  observer.observe(elements[0].closest('section') || elements[0]);
+  function animate() {
+    if (done) return;
+    var rect = section.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.92) {
+      done = true;
+      window.removeEventListener('scroll', animate);
+      elements.forEach(function (el, i) {
+        setTimeout(function () { el.classList.add('podval-in-ramka'); }, i * 200);
+        textGroups[i].forEach(function (txt) {
+          setTimeout(function () { txt.classList.add('podval-in-text'); }, i * 200 + 600);
+        });
+      });
+    }
+  }
+
+  window.addEventListener('scroll', animate, { passive: true });
+  animate();
 })();
