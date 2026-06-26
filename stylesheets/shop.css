@@ -1121,10 +1121,10 @@
 /* фото товара */
 .popup-photo {
   position: absolute;
-  left: 34.93vw;
-  top: 7.85vw;
-  width: 61.53vw;
-  height: 44.58vw;
+  left: 29.93vw;
+  top: 4vw;
+  width: 50.53vw;
+  height: 33.58vw;
   object-fit: contain;
   object-position: center center;
 }
