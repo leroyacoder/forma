@@ -10,20 +10,23 @@ body.about-page {
   position: relative;
   width: 100%;
   height: 62.5vw;
-  background: #FAF9F9;
+  overflow: hidden;
+}
+
+/* фоновая фотография */
+
+.fon_about {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
 
 /* меню */
 
-.ramka_menu_black {
-  width: 100%;
-  height: 6.39vw;
-  top: 0;
-  left: 0;
-  position: absolute;
-  object-fit: fill;
-  transform: scaleY(-1);
-}
 
 .aboutblock1 .text_meny1,
 .aboutblock1 .text_meny2,
@@ -31,7 +34,7 @@ body.about-page {
 .aboutblock1 .text_meny4 {
   position: absolute;
   top: 2.43vw;
-  color: #000000;
+  color: #ffffff;
   margin: 0;
   font-family: "Inter Medium";
   font-size: 1.25vw;
@@ -40,6 +43,7 @@ body.about-page {
   text-transform: uppercase;
   -webkit-text-stroke: 0;
   filter: blur(0.05vw);
+  z-index: 1;
 }
 
 /* главная */
@@ -81,7 +85,7 @@ body.about-page {
   left: 0;
   width: 0;
   height: 0.07vw;
-  background: #000000;
+  background: #ffffff;
   filter: blur(0.05vw);
   transition: width 0.5s ease;
 }
@@ -93,42 +97,22 @@ body.about-page {
   width: 100%;
 }
 
-/* буквы о н а с */
+/* буквы о нас */
 
-.o\.about {
+.about_bykvi {
   position: absolute;
-  left: 20.56%;
-  top: 8.05%;
-  width: 12.75vw;
+  width: 58.90vw;
+  height: 24.66vw;
+  left: 20.56vw;
+  top: 18.92vw;
   object-fit: contain;
-  transform: rotate(-19.32deg);
+  z-index: 1;
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 1s ease;
 }
 
-.n\.about {
-  position: absolute;
-  left: 42.53%;
-  top: 7.03%;
-  width: 11.61vw;
-  object-fit: contain;
-  transform: rotate(-1.15deg);
-}
-
-.a\.about {
-  position: absolute;
-  left: 52.78%;
-  top: 7.51%;
-  width: 12.07vw;
-  object-fit: contain;
-  transform: rotate(4.59deg);
-}
-
-.s\.about {
-  position: absolute;
-  left: 64.58%;
-  top: 8.15%;
-  width: 11.28vw;
-  object-fit: contain;
-  transform: rotate(10.94deg);
+.about_bykvi.about1-in {
+  clip-path: inset(0 0 0% 0);
 }
 
 /* квадратики */
@@ -140,6 +124,15 @@ body.about-page {
   left: calc(50% - 20vw);
   top: 41vw;
   object-fit: fill;
+  filter: invert(1);
+  mix-blend-mode: difference;
+  z-index: 1;
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 0.9s ease;
+}
+
+.kvadratiki_about.about1-in {
+  clip-path: inset(0 0 0% 0);
 }
 
 /* текст под квадратиками */
@@ -154,7 +147,17 @@ body.about-page {
   font-size: 1.11vw;
   line-height: 1.32vw;
   text-align: center;
-  color: #000000;
+  color: #ffffff;
+  mix-blend-mode: difference;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(1.5vw);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.text_about\.16.about1-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* убираем дефолтную обводку со всех ссылок на странице */
@@ -171,7 +174,7 @@ body.about-page {
   position: absolute;
   width: fit-content;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(1.5vw);
   top: 47.8vw;
   font-family: "Inter Medium";
   font-weight: 500;
@@ -180,9 +183,18 @@ body.about-page {
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
-  color: #000000;
+  color: #ffffff;
   filter: blur(0.05vw);
   cursor: pointer;
+  mix-blend-mode: difference;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.knopa_about\.18.about1-in {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 .knopa_about\.18::after {
@@ -192,7 +204,7 @@ body.about-page {
   left: 0;
   width: 0;
   height: 0.07vw;
-  background: #000000;
+  background: #ffffff;
   filter: blur(0.05vw);
   transition: width 0.5s ease;
 }
@@ -449,11 +461,8 @@ body.about-page {
   will-change: clip-path, transform;
 }
 
-/* анимация перехода между разделами — iris */
-.perehod1 {
-  display: none;
-}
-
+/* анимация перехода между разделами */
+.perehod1,
 .perehod2 {
   position: fixed;
   top: 0;
@@ -461,8 +470,8 @@ body.about-page {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0;
   pointer-events: none;
   z-index: 9999;
-  clip-path: circle(0% at 50% 50%);
-  transition: clip-path 0.65s cubic-bezier(0.4, 0, 0.6, 1);
+  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }

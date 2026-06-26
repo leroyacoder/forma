@@ -72,7 +72,7 @@
   }, { once: true });
 
   document.addEventListener('mousedown', function (e) {
-    var el = e.target.closest('[class*="knopa_strelka"], [class*="knopa_main"], [class*="knopa_about"], [class*="knopa_shop"], [class*="knopa_events"]');
+    var el = e.target.closest('[class*="knopa_main"], [class*="knopa_about"], [class*="knopa_shop"], [class*="knopa_events"]');
     if (el) play('perehod');
   });
 

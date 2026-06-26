@@ -6,6 +6,50 @@
   height: 62.5vw;
 }
 
+/* фон — растянуть на весь первый экран */
+
+.fon_events {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  z-index: 0;
+}
+
+/* blend mode как на shop */
+.kvadratiki_events,
+.text_events\.16,
+.knopa_events\.18 {
+  mix-blend-mode: difference;
+  z-index: 1;
+}
+
+.events_bykvi {
+  z-index: 1;
+}
+
+/* ===== АНИМАЦИЯ ПЕРВОГО ЭКРАНА ===== */
+
+/* буквы — шторка снизу */
+.events_bykvi {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 1s ease;
+}
+.events_bykvi.events1-in {
+  clip-path: inset(0 0 0% 0);
+}
+
+/* квадратики — шторка снизу */
+.kvadratiki_events {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 0.9s ease;
+}
+.kvadratiki_events.events1-in {
+  clip-path: inset(0 0 0% 0);
+}
+
 /* меню блок 1 */
 
 .ramka_menu_white\.event {
@@ -17,57 +61,53 @@
   object-fit: fill;
 }
 
-.eventsblock1 .text_meny2:nth-child(3) {
+.eventsblock1 .text_meny2 {
   width: 4.03vw;
   left: calc(50% + 0.69vw);
   text-align: center;
 }
 
-.eventsblock1 .text_meny2:nth-child(5) {
+.eventsblock1 .text_meny4 {
   width: 9.79vw;
   left: 82.15vw;
   text-align: center;
-}
-
-/* буквы ивенты */
-
-/* буквы ивенты */
-
-.i\.events,
-.v\.events,
-.e\.events,
-.n\.events,
-.t\.events,
-.q\.events {
-  height: 20vw;
-  width: auto;
-  top: 8vw;
   position: absolute;
+  top: 2.43vw;
+  color: #ffffff;
+  font-family: "Inter Medium";
+  font-size: 1.25vw;
+  font-weight: 500;
+  white-space: nowrap;
+  text-transform: uppercase;
+  -webkit-text-stroke: 0.05vw white;
+  filter: blur(0.05vw);
+}
+
+.eventsblock1 .text_meny4::after {
+  content: '';
+  position: absolute;
+  bottom: -0.15vw;
+  left: 0;
+  width: 0;
+  height: 0.07vw;
+  background: #ffffff;
+  filter: blur(0.05vw);
+  transition: width 0.5s ease;
+}
+
+.eventsblock1 .text_meny4:hover::after {
+  width: 100%;
+}
+
+/* буквы ивенты */
+
+.events_bykvi {
+  position: absolute;
+  width: 74.65vw;
+  height: 26.75vw;
+  left: 12.08vw;
+  top: 10vw;
   object-fit: contain;
-}
-
-.i\.events {
-  left: 9vw;
-}
-
-.v\.events {
-  left: 22vw;
-}
-
-.e\.events {
-  left: 35vw;
-}
-
-.n\.events {
-  left: 47vw;
-}
-
-.t\.events {
-  left: 60vw;
-}
-
-.q\.events {
-  left: 73vw;
 }
 
 /* квадратики, текст и кнопка блок 1 */
@@ -93,6 +133,13 @@
   font-weight: 400;
   line-height: 1.32vw;
   text-align: center;
+  opacity: 0;
+  transform: translateY(1.5vw);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.text_events\.16.events1-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .knopa_events\.18 {
@@ -112,6 +159,13 @@
   -webkit-text-stroke: 0.05vw white;
   filter: blur(0.05vw);
   cursor: pointer;
+  opacity: 0;
+  transform: translateY(1.5vw);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.knopa_events\.18.events1-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .knopa_events\.18::after {

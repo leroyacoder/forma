@@ -7,6 +7,21 @@ a {
 
 /* настройки страницы */
 
+/* тонкая белая линия снизу меню на всех страницах */
+.mainblock1::before,
+.aboutblock1::before,
+.shopblock1::before,
+.eventsblock1::before {
+  content: '';
+  position: absolute;
+  top: 6.39vw;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #ffffff;
+  z-index: 10;
+}
+
 body {
   width: 100vw;
   overflow-x: hidden;
@@ -20,18 +35,73 @@ body {
   position: relative;
   width: 100%;
   height: 56.25vw;
+  overflow: hidden;
+}
+
+/* фоновая фотография */
+
+.fon_main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  z-index: 0;
+}
+
+/* ===== АНИМАЦИЯ ПЕРВОГО ЭКРАНА ===== */
+
+/* буквы — шторка снизу */
+.forma_bykvi {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 1s ease;
+  z-index: 1;
+}
+.forma_bykvi.main1-in {
+  clip-path: inset(0 0 0% 0);
+}
+
+/* квадратики — шторка снизу */
+.kvadratiki_main {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 0.9s ease;
+  mix-blend-mode: difference;
+  z-index: 1;
+}
+.kvadratiki_main.main1-in {
+  clip-path: inset(0 0 0% 0);
+}
+
+/* текст — появление снизу */
+.text_main\.16 {
+  mix-blend-mode: difference;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(1.5vw);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.text_main\.16.main1-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* кнопка — появление снизу */
+.knopa_main\.18 {
+  mix-blend-mode: difference;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(1.5vw);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.knopa_main\.18.main1-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* меню блок 1 */
 
-.ramka_menu_white_main {
-  width: 100%;
-  height: 6.39vw;
-  top: 0;
-  left: 0;
-  position: absolute;
-  object-fit: fill;
-}
 
 .text_meny1,
 .text_meny2,
@@ -99,6 +169,15 @@ body {
 }
 
 /* буквы форма */
+
+.forma_bykvi {
+  position: absolute;
+  width: 67.54vw;
+  height: 25.75vw;
+  left: 15vw;
+  top: 20.14vw;
+  object-fit: contain;
+}
 
 .f {
   width: 16.88vw;

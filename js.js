@@ -1,3 +1,42 @@
+// анимация первого экрана главной
+
+(function () {
+  var bykvi = document.querySelector('.forma_bykvi');
+  var kv    = document.querySelector('.kvadratiki_main');
+  var txt   = document.getElementsByClassName('text_main.16')[0];
+  var knopa = document.getElementsByClassName('knopa_main.18')[0];
+
+  // парение букв
+  if (bykvi) {
+    (function () {
+      var phY = 0.4, phX = 1.2, phR = 0.8;
+      function tick() {
+        var t = Date.now() * 0.00072;
+        var y = Math.sin(t * 0.65 + phY) * 18;
+        var x = Math.cos(t * 0.41 + phX) * 8;
+        var r = Math.sin(t * 0.28 + phR) * 2.5;
+        bykvi.style.translate = x.toFixed(2) + 'px ' + y.toFixed(2) + 'px';
+        bykvi.style.rotate    = r.toFixed(2) + 'deg';
+        requestAnimationFrame(tick);
+      }
+      tick();
+    })();
+  }
+
+  function runEntrance() {
+    if (bykvi) setTimeout(function () { bykvi.classList.add('main1-in'); }, 100);
+    if (kv)    setTimeout(function () { kv.classList.add('main1-in'); }, 400);
+    if (txt)   setTimeout(function () { txt.classList.add('main1-in'); }, 900);
+    if (knopa) setTimeout(function () { knopa.classList.add('main1-in'); }, 1200);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', runEntrance);
+  } else {
+    runEntrance();
+  }
+})();
+
 // кнопка "узнать наше видение" — скролл к следующему блоку
 (function () {
   var btn = document.querySelector('.knopa_main\\.18');

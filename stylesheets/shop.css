@@ -45,16 +45,71 @@
   overflow: hidden;
 }
 
+/* фон первого экрана */
+.fon_shop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  z-index: 0;
+}
+
+/* blend mode difference на элементах первого экрана */
+.kvadratiki_shop,
+.text_shop\.16,
+.knopa_shop\.18 {
+  mix-blend-mode: difference;
+  z-index: 1;
+}
+
+.shop_bykvi {
+  z-index: 1;
+}
+
+/* ===== АНИМАЦИЯ ПЕРВОГО ЭКРАНА ===== */
+
+/* квадратики — шторка снизу */
+.kvadratiki_shop {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 0.9s ease;
+}
+.kvadratiki_shop.shop1-in {
+  clip-path: inset(0 0 0% 0);
+}
+
+/* текст и кнопка — появление снизу */
+.text_shop\.16,
+.knopa_shop\.18 {
+  opacity: 0;
+  transform: translateY(1.5vw);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.text_shop\.16.shop1-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.knopa_shop\.18.shop1-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* буквы — появление через blur как превью на главной */
+.shop_bykvi {
+  opacity: 0;
+  filter: blur(18px) brightness(0) invert(1);
+  transform: scale(1.12);
+  transition: opacity 0.9s ease, filter 0.9s ease, transform 0.9s ease;
+}
+.shop_bykvi.shop1-in {
+  opacity: 1;
+  filter: blur(0px) brightness(0) invert(1);
+  transform: scale(1);
+}
+
 /* меню блок 1 */
 
-.ramka_menu_white_shop {
-  width: 100%;
-  height: 6.39vw;
-  top: 0;
-  left: 0;
-  position: absolute;
-  object-fit: fill;
-}
 
 /* о нас */
 
@@ -74,74 +129,13 @@
 
 /* буквы магазин */
 
-.m\.shop {
+.shop_bykvi {
   position: absolute;
-  left: 11.18%;
-  top: 12vw;
-  width: 13.15vw;
-  height: 28vw;
+  width: 77.76vw;
+  height: 27.01vw;
+  left: 11.18vw;
+  top: 12.5vw;
   object-fit: contain;
-  transform: rotate(-9.55deg);
-}
-
-.a\.shop {
-  position: absolute;
-  left: 23.69%;
-  top: 11.3vw;
-  width: 12.32vw;
-  height: 28vw;
-  object-fit: contain;
-  transform: rotate(-5.74deg);
-}
-
-.g\.shop {
-  position: absolute;
-  left: 34.8%;
-  top: 10.3vw;
-  width: 11.01vw;
-  height: 28vw;
-  object-fit: contain;
-  transform: rotate(-10.19deg);
-}
-
-.a2\.shop {
-  position: absolute;
-  left: 41.81%;
-  top: 10vw;
-  width: 12.66vw;
-  height: 28vw;
-  object-fit: contain;
-  transform: rotate(3.07deg);
-}
-
-.z\.shop {
-  position: absolute;
-  left: 53.74%;
-  top: 11.1vw;
-  width: 9.07vw;
-  height: 28vw;
-  object-fit: contain;
-  transform: rotate(-4.19deg);
-}
-
-.i\.shop {
-  position: absolute;
-  left: 64.58%;
-  top: 10.9vw;
-  width: 11.25vw;
-  height: 28vw;
-  object-fit: contain;
-  transform: rotate(2.55deg);
-}
-
-.n\.shop {
-  position: absolute;
-  left: 75.44%;
-  top: 12vw;
-  width: 13.22vw;
-  height: 28vw;
-  object-fit: contain;
-  transform: matrix(1, -0.01, 0.01, 1, 0, 0);
 }
 
 /* квадратики, текст и кнопка */
@@ -1229,3 +1223,4 @@
 .popup-photo:hover {
   transform: scale(1.07);
 }
+

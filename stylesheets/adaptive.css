@@ -1,0 +1,253 @@
+@media (max-width: 480px) {
+
+/* ─── МЕНЮ ───────────────────────────────────────────────────────────────── */
+
+.text_meny1,
+.text_meny2,
+.text_meny3,
+.text_meny4 {
+  display: none;
+}
+
+/* бургер: две линии */
+.burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  width: 9.15vw;
+  height: 3.50vw;
+  left: 87.44vw;
+  top: 5.68vw;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.burger span {
+  display: block;
+  width: 100%;
+  height: 0.72vw;
+  background: #ffffff;
+}
+
+/* ─── БЛОК 1 — ФОРНА ────────────────────────────────────────────────────── */
+
+.mainblock1 {
+  height: 210.14vw;
+}
+
+.forma_bykvi {
+  width: 97.24vw;
+  height: 38.16vw;
+  left: 1.45vw;
+  top: 89.86vw;
+}
+
+.kvadratiki_main {
+  width: 87.44vw;
+  height: 31.16vw;
+  left: 6.28vw;
+  top: 174.88vw;
+}
+
+.text_main\.16 {
+  width: 83.57vw;
+  left: 8.70vw;
+  top: 178.26vw;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.knopa_main\.18 {
+  width: 85.99vw;
+  left: calc(50% - 42.99vw);
+  top: 198.07vw;
+  font-size: 18px;
+  line-height: 22px;
+  white-space: normal;
+}
+
+/* ─── ОТКЛЮЧАЕМ STICKY ───────────────────────────────────────────────────── */
+
+.lipkiy-wrapper {
+  height: auto;
+}
+
+.lipkiy-container {
+  position: relative;
+  height: auto;
+}
+
+.mainblock2,
+.mainblock3,
+.mainblock4 {
+  position: relative;
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none;
+  background: #080808;
+}
+
+/* ─── БЛОК 2 — О НАС ────────────────────────────────────────────────────── */
+
+/* section начинается сразу после mainblock1 (~870px страницы) */
+
+.mainblock2 {
+  height: 222vw;
+}
+
+.decor_about2 {
+  width: 29.64vw;
+  height: 30.86vw;
+  left: 2.81vw;
+  top: 25.46vw;
+  transform: rotate(-62.53deg);
+}
+
+.preview_about {
+  width: 72.46vw;
+  height: 48.29vw;
+  left: 13.77vw;
+  top: 84.06vw;
+}
+
+.kvadratiki_preview_about {
+  width: 86.47vw;
+  height: 25.12vw;
+  left: 6.76vw;
+  top: 139.37vw;
+}
+
+.text_preview_about\.16 {
+  width: 87.92vw;
+  left: 6.52vw;
+  top: 143.24vw;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.knopa_preview_about\.18 {
+  width: 19.57vw;
+  left: calc(50% - 9.78vw + 1.81vw);
+  top: 158.45vw;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.decor_about3 {
+  width: 30.25vw;
+  height: 30.25vw;
+  left: 61.06vw;
+  top: 179.30vw;
+  transform: rotate(1.19deg);
+}
+
+/* ─── БЛОК 3 — МАГАЗИН ──────────────────────────────────────────────────── */
+
+/* section начинается после mainblock2 (~1788px страницы) */
+
+.mainblock3 {
+  height: 193vw;
+}
+
+.decor_shop3 {
+  width: 40.58vw;
+  height: 44.60vw;
+  left: 2.90vw;
+  top: 1.21vw;
+}
+
+.preview_shop {
+  width: 72.46vw;
+  height: 48.35vw;
+  left: 13.77vw;
+  top: 61.84vw;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.kvadratiki_preview_shop {
+  width: 86.47vw;
+  height: 25.12vw;
+  left: 6.85vw;
+  top: 117.04vw;
+}
+
+.text_preview_shop\.16 {
+  width: 83.57vw;
+  left: 8.21vw;
+  top: 120.53vw;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.knopa_preview_shop\.18 {
+  width: 27.05vw;
+  left: calc(50% - 13.53vw + 1.78vw);
+  top: 136.13vw;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.decor_shop2 {
+  width: 34.18vw;
+  height: 25.51vw;
+  left: 57.49vw;
+  top: 155.07vw;
+  transform: matrix(-0.95, 0.3, 0.3, 0.95, 0, 0);
+}
+
+/* ─── БЛОК 4 — МЕРОПРИЯТИЯ ──────────────────────────────────────────────── */
+
+/* section начинается после mainblock3 (~2586px страницы) */
+
+.mainblock4 {
+  height: 199vw;
+}
+
+.decor_ivents2 {
+  width: 33.57vw;
+  height: 35.19vw;
+  left: -1.21vw;
+  top: 4.11vw;
+  transform: rotate(134.36deg);
+}
+
+.preview_ivents {
+  width: 72.46vw;
+  height: 48.42vw;
+  left: 14.98vw;
+  top: 68.36vw;
+}
+
+.kvadratiki_preview_ivents {
+  width: 86.47vw;
+  height: 25.12vw;
+  left: 8.06vw;
+  top: 123.57vw;
+}
+
+.text_preview_ivents\.16 {
+  width: 87.92vw;
+  left: 7.82vw;
+  top: 127.44vw;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.knopa_preview_ivents\.18 {
+  width: 39.61vw;
+  left: calc(50% - 19.81vw + 1.21vw);
+  top: 142.51vw;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.decor_ivents3 {
+  width: 33.60vw;
+  height: 28.89vw;
+  left: 58.94vw;
+  top: 157.73vw;
+  transform: rotate(-15.18deg);
+}
+
+}

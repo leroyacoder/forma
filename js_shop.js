@@ -1,4 +1,49 @@
-// анимация карточек товаров 
+// анимация первого экрана магазина
+
+(function () {
+
+  var bykvi   = document.querySelector('.shop_bykvi');
+  var kv      = document.querySelector('.kvadratiki_shop');
+  var txt     = document.getElementsByClassName('text_shop.16')[0];
+  var knopa   = document.getElementsByClassName('knopa_shop.18')[0];
+
+  // парение букв shop_bykvi
+  if (bykvi) {
+    (function () {
+      var phY = 0.4, phX = 1.2, phR = 0.8;
+      function tick() {
+        var t = Date.now() * 0.00072;
+        var y = Math.sin(t * 0.65 + phY) * 18;
+        var x = Math.cos(t * 0.41 + phX) * 8;
+        var r = Math.sin(t * 0.28 + phR) * 2.5;
+        bykvi.style.translate = x.toFixed(2) + 'px ' + y.toFixed(2) + 'px';
+        bykvi.style.rotate    = r.toFixed(2) + 'deg';
+        requestAnimationFrame(tick);
+      }
+      tick();
+    })();
+  }
+
+  // анимация появления при загрузке страницы
+  function runEntrance() {
+    // буквы — сразу
+    if (bykvi) setTimeout(function () { bykvi.classList.add('shop1-in'); }, 100);
+    // пауза ~900ms, потом остальные элементы
+    if (kv)    setTimeout(function () { kv.classList.add('shop1-in'); if (window.playSound) window.playSound('plashki'); }, 1100);
+    if (txt)   setTimeout(function () { txt.classList.add('shop1-in'); if (window.playSound) window.playSound('tekst'); }, 1500);
+    if (knopa) setTimeout(function () { knopa.classList.add('shop1-in'); }, 1800);
+  }
+
+  // запускаем после загрузки DOM
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', runEntrance);
+  } else {
+    runEntrance();
+  }
+
+})();
+
+// анимация карточек товаров
 
 (function () {
 
