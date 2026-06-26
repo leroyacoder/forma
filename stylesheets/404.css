@@ -25,7 +25,7 @@ body.page-404 .text_meny3 {
 /* позиции меню для страницы 404 */
 
 /* о нас */
-body.page-404 .mainblock1 .text_meny2:nth-child(4) {
+body.page-404 .mainblock1 .text_meny2:nth-child(5) {
   left: 35vw;
   text-align: center;
 }
@@ -42,92 +42,49 @@ body.page-404 .text_meny3 {
 }
 
 /* мероприятия */
-body.page-404 .mainblock1 .text_meny2:nth-child(6) {
+body.page-404 .mainblock1 .text_meny2:nth-child(7) {
   left: 66.46vw;
   text-align: center;
+}
+
+/* сброс overflow для 404 — overflow:hidden на mainblock1 ломает ширину блока */
+
+body.page-404 .mainblock1 {
+  overflow: visible;
 }
 
 /* фон */
 
 .main404 {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 56.25vw;
-  object-fit: cover;
-  object-position: 65% top;
+  width: 131.11vw;
+  height: 140.56vw;
+  left: -18.96vw;
+  top: -15.42vw;
+  object-fit: fill;
+  clip-path: inset(15.42vw 12.15vw 68.89vw 18.96vw);
 }
 
-/* буква О */
+/* буквы ошибки */
 
-.o\.404 {
+.bykvi_404 {
   position: absolute;
+  width: 77.59vw;
+  height: 24.16vw;
   left: 12.36vw;
-  top: 20.44vw;
-  width: 13.25vw;
-  height: 17.21vw;
+  top: 18.82vw;
   object-fit: contain;
-  transform: rotate(-5.74deg);
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 1s ease, transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 1;
 }
 
-/* буква Ш */
-
-.sh\.404 {
-  position: absolute;
-  left: 26.18vw;
-  top: 19.73vw;
-  width: 14.21vw;
-  height: 17.25vw;
-  object-fit: contain;
-  transform: rotate(2.72deg);
+.bykvi_404.in {
+  clip-path: inset(0 0 0% 0);
 }
 
-/* буква И */
-
-.i\.404 {
-  position: absolute;
-  left: 41.39vw;
-  top: 16.98vw;
-  width: 12.07vw;
-  height: 20.19vw;
-  object-fit: contain;
-}
-
-/* буква Б */
-
-.b\.404 {
-  position: absolute;
-  left: 52.74vw;
-  top: 17.19vw;
-  width: 12.96vw;
-  height: 19.63vw;
-  object-fit: contain;
-  transform: rotate(6.3deg);
-}
-
-/* буква К */
-
-.k\.404 {
-  position: absolute;
-  left: 64.17vw;
-  top: 17.86vw;
-  width: 9.95vw;
-  height: 18.33vw;
-  object-fit: contain;
-  transform: rotate(15.96deg);
-}
-
-/* буква А */
-
-.a\.404 {
-  position: absolute;
-  left: 75.2vw;
-  top: 19.51vw;
-  width: 12.37vw;
-  height: 17.98vw;
-  object-fit: contain;
-  transform: rotate(7.15deg);
+.bykvi_404.in:hover {
+  transform: scale(1.04);
 }
 
 /* квадратики */
@@ -139,6 +96,12 @@ body.page-404 .mainblock1 .text_meny2:nth-child(6) {
   left: 34.93vw;
   top: 42vw;
   object-fit: contain;
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 0.9s ease;
+}
+
+.kvadratiki_404.in {
+  clip-path: inset(0 0 0% 0);
 }
 
 /* текст ошибки */
@@ -154,6 +117,14 @@ body.page-404 .mainblock1 .text_meny2:nth-child(6) {
   font-size: 1.11vw;
   line-height: 1.32vw;
   text-align: center;
+  opacity: 0;
+  transform: translateY(1.5vw);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.text_404\.16.in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* кнопка возврата */
@@ -174,6 +145,14 @@ body.page-404 .mainblock1 .text_meny2:nth-child(6) {
   -webkit-text-stroke: 0.05vw white;
   filter: blur(0.05vw);
   cursor: pointer;
+  opacity: 0;
+  transform: translateY(1.5vw);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.knopa_404\.18.in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .knopa_404\.18::after {
@@ -191,3 +170,19 @@ body.page-404 .mainblock1 .text_meny2:nth-child(6) {
 .knopa_404\.18:hover::after {
   width: 100%;
 }
+
+/* лого 404 */
+.logo_404 {
+  position: absolute;
+  width: 4.37vw;
+  height: 4.9vw;
+  left: 1.8vw;
+  top: 0.8vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.logo_404 img { width: 100%; height: 100%; object-fit: contain; }
+.logo_404:hover { transform: scale(1.12); }

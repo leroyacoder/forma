@@ -112,6 +112,7 @@
   opacity: 1;
   filter: blur(0px) brightness(0) invert(1);
   transform: scale(1);
+  transition: opacity 0.9s ease, filter 0.9s ease, transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .shop_bykvi.shop1-in:hover {
   transform: scale(1.04);
@@ -121,10 +122,10 @@
 
 .logo_shop {
   position: absolute;
-  width: 59.62px;
-  height: 67px;
-  left: 1.39vw;
-  top: 0.5vw;
+  width: 4.37vw;
+  height: 4.9vw;
+  left: 1.8vw;
+  top: 0.8vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1077,7 +1078,23 @@
   height: 6.39vw;
   background: #000;
   z-index: 10000;
+  border-bottom: 0.07vw solid rgba(255,255,255,0.4);
 }
+
+.logo_popup {
+  position: absolute;
+  width: 4.37vw;
+  height: 4.9vw;
+  left: 1.8vw;
+  top: 0.8vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.logo_popup img { width: 100%; height: 100%; object-fit: contain; }
+.logo_popup:hover { transform: scale(1.12); }
 
 /* позиции элементов меню */
 .popup-nav .text_meny2:nth-child(3) {
@@ -1121,10 +1138,8 @@
 /* фото товара */
 .popup-photo {
   position: absolute;
-  left: 29.93vw;
-  top: 4vw;
-  width: 50.53vw;
-  height: 33.58vw;
+  left: 65.70vw;
+  top: 30.14vw;
   object-fit: contain;
   object-position: center center;
 }
@@ -1223,7 +1238,7 @@
 }
 .popup-photo {
   clip-path: inset(0 0 100% 0);
-  transition: clip-path 0.9s ease 0.6s, transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: clip-path 0.9s ease 0.6s;
 }
 .popup-pname,
 .popup-ptype,
@@ -1250,8 +1265,12 @@
   opacity: 0.7; transform: translateY(0); transition-delay: 1.7s;
 }
 
-/* ховер на рамку — масштаб фото */
+/* ховер на фото — масштаб через scale property (не конфликтует с transform) */
+.popup-photo {
+  scale: 1;
+  transition: clip-path 0.9s ease 0.6s, scale 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
 .popup-photo:hover {
-  transform: scale(1.07);
+  scale: 1.05;
 }
 

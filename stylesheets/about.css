@@ -9,7 +9,7 @@ body.about-page {
 .aboutblock1 {
   position: relative;
   width: 100%;
-  height: 56.25vw;
+  height: 57vw;
   overflow: hidden;
 }
 
@@ -28,6 +28,20 @@ body.about-page {
 
 /* меню */
 
+.logo_about {
+  position: absolute;
+  width: 4.37vw;
+  height: 4.9vw;
+  left: 1.8vw;
+  top: 0.8vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.logo_about img { width: 100%; height: 100%; object-fit: contain; }
+.logo_about:hover { transform: scale(1.12); }
 
 .aboutblock1 .text_meny1,
 .aboutblock1 .text_meny2,
@@ -119,6 +133,7 @@ body.about-page {
   opacity: 1;
   filter: blur(0px) brightness(0) invert(1);
   transform: scale(1);
+  transition: opacity 0.9s ease, filter 0.9s ease, transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .about_bykvi.about1-in:hover {
   transform: scale(1.04);
@@ -134,7 +149,6 @@ body.about-page {
   top: 43vw;
   object-fit: fill;
   filter: invert(1);
-  mix-blend-mode: difference;
   z-index: 1;
   clip-path: inset(0 0 100% 0);
   transition: clip-path 0.9s ease;
@@ -157,7 +171,6 @@ body.about-page {
   line-height: 1.32vw;
   text-align: center;
   color: #ffffff;
-  mix-blend-mode: difference;
   z-index: 1;
   opacity: 0;
   transform: translateY(1.5vw);
@@ -195,7 +208,6 @@ body.about-page {
   color: #ffffff;
   filter: blur(0.05vw);
   cursor: pointer;
-  mix-blend-mode: difference;
   z-index: 1;
   opacity: 0;
   transition: opacity 0.7s ease, transform 0.7s ease;
@@ -395,6 +407,7 @@ body.about-page {
   position: relative;
   width: 100%;
   background: #FAF9F9;
+  padding-top: 15vw;
 }
 
 /* общие стили для всех изображений галереи

@@ -37,12 +37,30 @@
   }
 })();
 
+// буквы форма — клик/ховер/звуки
+(function () {
+  var bykvi = document.querySelector('.forma_bykvi');
+  var target = document.querySelector('.lipkiy-wrapper');
+  if (!bykvi) return;
+  bykvi.addEventListener('mouseenter', function () {
+    if (window.playSound) window.playSound('hover');
+  });
+  bykvi.addEventListener('click', function () {
+    if (window.playSound) window.playSound('perehod');
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+})();
+
 // кнопка "узнать наше видение" — скролл к следующему блоку
 (function () {
   var btn = document.querySelector('.knopa_main\\.18');
   var target = document.querySelector('.lipkiy-wrapper');
   if (!btn || !target) return;
+  btn.addEventListener('mouseenter', function () {
+    if (window.playSound) window.playSound('hover');
+  });
   btn.addEventListener('click', function () {
+    if (window.playSound) window.playSound('perehod');
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 })();
@@ -342,26 +360,31 @@
 // анимация рамок и текста подвала
 
 (function () {
+  // используем последний mainpodval на странице (на shop.html их два)
+  var allPodval = document.querySelectorAll('.mainpodval');
+  if (!allPodval.length) return;
+  var section = allPodval[allPodval.length - 1];
+
   var elements = [1, 2, 3].map(function (n) {
-    return document.querySelector('.ramka_podval' + n + ', .ramka_podval_black' + n);
+    return section.querySelector('.ramka_podval' + n) ||
+           section.querySelector('.ramka_podval_black' + n);
   }).filter(Boolean);
   if (!elements.length) return;
 
-  var textGroups = [
-    ['text_podval_ramka1_1.18', 'text_podval_ramka1_2.18',
-     'text_podval_ramka1_3.18', 'text_podval_ramka1_4.18'],
-    ['text_podval_ramka2_16'],
-    ['text_podval_ramka3_16'],
-  ].map(function (names) {
+  var textSelectors = [
+    ['.text_podval_ramka1_1\\.18', '.text_podval_ramka1_2\\.18',
+     '.text_podval_ramka1_3\\.18', '.text_podval_ramka1_4\\.18'],
+    ['.text_podval_ramka2_16'],
+    ['.text_podval_ramka3_16'],
+  ];
+  var textGroups = textSelectors.map(function (selectors) {
     var els = [];
-    names.forEach(function (name) {
-      var found = document.getElementsByClassName(name);
-      for (var j = 0; j < found.length; j++) els.push(found[j]);
+    selectors.forEach(function (sel) {
+      section.querySelectorAll(sel).forEach(function (el) { els.push(el); });
     });
     return els;
   });
 
-  var section = elements[0].closest('section') || elements[0];
   var done = false;
 
   function animate() {
@@ -379,6 +402,7 @@
     }
   }
 
+  window.podvalAnimate = animate;
   window.addEventListener('scroll', animate, { passive: true });
   animate();
 })();

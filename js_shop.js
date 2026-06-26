@@ -43,14 +43,18 @@
 
 })();
 
-// клик на буквы — скролл к следующему блоку
+// буквы магазин — клик/ховер/звуки
 
 (function () {
   var bykvi = document.querySelector('.shop_bykvi');
   var target = document.querySelector('.shopblock2');
-  if (!bykvi || !target) return;
+  if (!bykvi) return;
+  bykvi.addEventListener('mouseenter', function () {
+    if (window.playSound) window.playSound('hover');
+  });
   bykvi.addEventListener('click', function () {
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (window.playSound) window.playSound('perehod');
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 })();
 
@@ -142,15 +146,15 @@
 (function () {
 
   var products = {
-    1: { name: 'НЕЗРИМЫЙ ВЕС', type: 'подвеска //', price: '4.500 ₽', desc: ['олово sn97cu3, стекло, цепочка и фурнитура из нержавеющей стали', 'каждая подвеска изготавливается вручную, могут быть незначительные отличия', 'срок изготовления: 5-7 дней'], photo: './img/tovar1_photo2.png', photoPadding: '10vw' },
-    2: { name: 'САМОСТЬ',       type: 'кольцо //',   price: '4.000 ₽', desc: ['олово sn97cu3, аквамарин', 'каждое кольцо изготавливается вручную, могут быть незначительные отличия', 'срок изготовления: 5-7 дней'], photo: './img/tovar2_photo2.png', photoOffsetX: '5vw' },
-    3: { name: 'НАВИ',          type: 'браслет //',  price: '4.300 ₽', desc: ['олово sn97cu3', 'каждый браслет изготавливается вручную, могут быть незначительные отличия', 'срок изготовления: 5-7 дней'], photo: './img/tovar3_photo2.png', photoPadding: '7vw' },
-    4: { name: 'ФОРМУЛА',       type: 'моно-серьга //', price: '1.500 ₽', desc: ['олово sn97cu3, нержавеющая сталь, стеклянный кабашон ручной работы', 'каждая серьга изготавливается вручную, могут быть незначительные отличия', 'срок изготовления: 5-7 дней'], photo: './img/tovar4_photo2.png', photoOffsetX: '5vw' },
-    5: { name: 'ЧАСТИЦЫ ОКЕАНА', type: 'подвеска //', price: '1.500 ₽', desc: ['ракушка, нержавеющая сталь', 'каждая подвеска изготавливается вручную, могут быть незначительные отличия', 'срок изготовления: 5-7 дней'], photo: './img/tovar5_photo2.png' },
-    6: { name: 'КРИСТАЛЛ',      type: 'кольцо //',   price: '3.500 ₽', desc: ['олово sn97cu3, кварц', 'каждое кольцо изготавливается вручную, могут быть незначительные отличия', 'срок изготовления: 5-7 дней'], photo: './img/tovar6_photo2.png' },
-    7: { name: 'КАПЛИ ДОЖДЯ',   type: 'брелок //',   price: '1.900 ₽', desc: ['ракушка, нержавеющая сталь, перламутр', 'каждый брелок изготавливается вручную, могут быть незначительные отличия', 'срок изготовления: 5-7 дней'], photo: './img/tovar7_photo2.png', photoOffsetX: '-5vw' },
-    8: { name: 'СИМФОНИЯ',      type: 'карабин //',  price: '2.500 ₽', desc: ['олово sn97cu3, перламутр, нержавеющая сталь, кварц', 'каждый карабин изготавливается вручную, могут быть незначительные отличия', 'срок изготовления: 5-7 дней'], photo: './img/tovar8_photo2.png', photoPadding: '7vw', photoOffsetX: '-5vw' },
-    9: { name: 'САМОСТЬ 2',     type: 'кольцо //',   price: '3.500 ₽', desc: ['олово sn97cu3, аквамарин', 'каждое кольцо изготавливается вручную, могут быть незначительные отличия', 'срок изготовления: 5-7 дней'], photo: './img/tovar9_photo2.png', photoPadding: '7vw', photoOffsetX: '5vw' },
+    1: { name: 'НЕЗРИМЫЙ ВЕС',   type: 'подвеска //',    price: '4.500 ₽', desc: ['олово sn97cu3, стекло, цепочка и фурнитура из нержавеющей стали', 'каждая подвеска изготавливается вручную, могут быть незначительные отличия', 'срок изготовления: 5-7 дней'], photo: './img/tovar1_photo2.png', photoW: '32vw', photoH: '52vw', photoR: '90deg' },
+    2: { name: 'САМОСТЬ',         type: 'кольцо //',      price: '4.000 ₽', desc: ['олово sn97cu3, аквамарин', 'каждое кольцо изготавливается вручную, могут быть незначительные отличия', 'срок изготовления: 5-7 дней'], photo: './img/tovar2_photo2.png', photoW: '39.88vw', photoH: '41.22vw' },
+    3: { name: 'НАВИ',            type: 'браслет //',     price: '4.300 ₽', desc: ['олово sn97cu3', 'каждый браслет изготавливается вручную, могут быть незначительные отличия', 'срок изготовления: 5-7 дней'], photo: './img/tovar3_photo2.png', photoW: '57.54vw', photoH: '34.55vw' },
+    4: { name: 'ФОРМУЛА',         type: 'моно-серьга //', price: '1.500 ₽', desc: ['олово sn97cu3, нержавеющая сталь, стеклянный кабашон ручной работы', 'каждая серьга изготавливается вручную, могут быть незначительные отличия', 'срок изготовления: 5-7 дней'], photo: './img/tovar4_photo2.png', photoW: '30.53vw', photoH: '41.42vw', offsetX: '2.5vw' },
+    5: { name: 'ЧАСТИЦЫ ОКЕАНА',  type: 'подвеска //',    price: '1.500 ₽', desc: ['ракушка, нержавеющая сталь', 'каждая подвеска изготавливается вручную, могут быть незначительные отличия', 'срок изготовления: 5-7 дней'], photo: './img/tovar5_photo2.png', photoW: '40vw', photoH: '60vw', photoR: '-90deg' },
+    6: { name: 'КРИСТАЛЛ',        type: 'кольцо //',      price: '3.500 ₽', desc: ['олово sn97cu3, кварц', 'каждое кольцо изготавливается вручную, могут быть незначительные отличия', 'срок изготовления: 5-7 дней'], photo: './img/tovar6_photo2.png', photoW: '36.97vw', photoH: '36.53vw', offsetX: '-0.5vw' },
+    7: { name: 'КАПЛИ ДОЖДЯ',     type: 'брелок //',      price: '1.900 ₽', desc: ['ракушка, нержавеющая сталь, перламутр', 'каждый брелок изготавливается вручную, могут быть незначительные отличия', 'срок изготовления: 5-7 дней'], photo: './img/tovar7_photo2.png', photoW: '51.32vw', photoH: '44.44vw' },
+    8: { name: 'СИМФОНИЯ',        type: 'карабин //',     price: '2.500 ₽', desc: ['олово sn97cu3, перламутр, нержавеющая сталь, кварц', 'каждый карабин изготавливается вручную, могут быть незначительные отличия', 'срок изготовления: 5-7 дней'], photo: './img/tovar8_photo2.png', photoW: '38.21vw', photoH: '50.86vw', photoR: '-31.6deg', offsetX: '-0.3vw' },
+    9: { name: 'САМОСТЬ 2',       type: 'кольцо //',      price: '3.500 ₽', desc: ['олово sn97cu3, аквамарин', 'каждое кольцо изготавливается вручную, могут быть незначительные отличия', 'срок изготовления: 5-7 дней'], photo: './img/tovar9_photo2.png', photoW: '40.49vw', photoH: '32.5vw', offsetX: '2vw', offsetY: '1.5vw' },
   };
 
   // нумерация
@@ -166,10 +170,23 @@
   var descEl  = document.querySelector('.popup-pdesc');
   if (!popup) return;
 
+  var logoShop = document.querySelector('.logo_shop');
+
   function openPopup(productNum) {
     var p = products[productNum];
     if (!p) return;
-    if (photoEl) { photoEl.src = p.photo; photoEl.style.translate = ''; photoEl.style.padding = p.photoPadding || ''; photoEl.dataset.offsetX = p.photoOffsetX || '0px'; }
+    if (photoEl) {
+      var r  = p.photoR   ? ' rotate(' + p.photoR + ')' : '';
+      var ox = p.offsetX  || '0vw';
+      var oy = p.offsetY  || '0vw';
+      photoEl.src             = p.photo;
+      photoEl.style.translate = '';
+      photoEl.style.rotate    = '';
+      photoEl.style.width     = p.photoW || '';
+      photoEl.style.height    = p.photoH || '';
+      photoEl.style.transform = 'translate(calc(-50% + ' + ox + '), calc(-50% + ' + oy + '))' + r;
+      photoEl.dataset.offsetX = '0px';
+    }
     if (nameEl)  nameEl.textContent  = p.name;
     if (typeEl)  typeEl.textContent  = p.type;
     if (priceEl) priceEl.textContent = p.price;
@@ -177,6 +194,7 @@
     popup.scrollTop = 0;
     popup.classList.add('popup-active');
     document.body.style.overflow = 'hidden';
+    if (logoShop) logoShop.style.display = 'none';
     if (window.playSound) window.playSound('perehod');
   }
   window.openPopup = openPopup;
@@ -186,8 +204,10 @@
   function closePopup() {
     popup.classList.remove('popup-active');
     document.body.style.overflow = '';
+    if (logoShop) logoShop.style.display = '';
     if (window.playSound) window.playSound('perehod');
-    if (urlRef) { history.back(); }
+    if (urlRef) { history.back(); return; }
+    if (window.podvalAnimate) window.podvalAnimate();
   }
 
   // клик открывает попап

@@ -39,14 +39,18 @@
 
 })();
 
-// клик на буквы о нас — скролл к следующему блоку
+// буквы о нас — клик/ховер/звуки
 
 (function () {
   var bykvi = document.querySelector('.about_bykvi');
   var target = document.querySelector('.aboutblock2');
-  if (!bykvi || !target) return;
+  if (!bykvi) return;
+  bykvi.addEventListener('mouseenter', function () {
+    if (window.playSound) window.playSound('hover');
+  });
   bykvi.addEventListener('click', function () {
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (window.playSound) window.playSound('perehod');
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 })();
 
@@ -56,7 +60,11 @@
   var btn = document.querySelector('.knopa_about\\.18');
   var target = document.querySelector('.aboutblock2');
   if (!btn || !target) return;
+  btn.addEventListener('mouseenter', function () {
+    if (window.playSound) window.playSound('hover');
+  });
   btn.addEventListener('click', function () {
+    if (window.playSound) window.playSound('perehod');
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 })();

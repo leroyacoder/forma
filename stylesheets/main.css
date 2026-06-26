@@ -56,11 +56,15 @@ body {
 /* буквы — шторка снизу */
 .forma_bykvi {
   clip-path: inset(0 0 100% 0);
-  transition: clip-path 1s ease;
+  transition: clip-path 1s ease, transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   z-index: 1;
+  cursor: pointer;
 }
 .forma_bykvi.main1-in {
   clip-path: inset(0 0 0% 0);
+}
+.forma_bykvi.main1-in:hover {
+  transform: scale(1.04);
 }
 
 /* квадратики — шторка снизу */
@@ -742,6 +746,18 @@ body {
   transform: translateY(0) !important;
 }
 
+/* рамки и текст внутри попапа не скрываем */
+.popup .ramka_podval1, .popup .ramka_podval2, .popup .ramka_podval3,
+.popup .ramka_podval_black1, .popup .ramka_podval_black2, .popup .ramka_podval_black3 {
+  clip-path: none;
+  transition: none;
+}
+.popup [class*="text_podval_ramka"] {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
 /* текст в рамке 1 */
 
 .text_podval_ramka1_1\.18 {
@@ -1030,3 +1046,19 @@ body {
 .mainpodval:has(.text_podval_ramka1_2\.18:hover) .ani_podval2 { opacity: 1; transform: translateY(0); }
 .mainpodval:has(.text_podval_ramka1_3\.18:hover) .ani_podval3 { opacity: 1; transform: translateY(0); }
 .mainpodval:has(.text_podval_ramka1_4\.18:hover) .ani_podval4 { opacity: 1; transform: translateY(0); }
+
+/* лого главная */
+.logo_main {
+  position: absolute;
+  width: 4.37vw;
+  height: 4.9vw;
+  left: 1.8vw;
+  top: 0.8vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.logo_main img { width: 100%; height: 100%; object-fit: contain; }
+.logo_main:hover { transform: scale(1.12); }
