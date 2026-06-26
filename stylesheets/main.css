@@ -1,5 +1,3 @@
-/* сброс стилей ссылок */
-
 a {
   color: inherit;
   text-decoration: none;
@@ -7,11 +5,11 @@ a {
 
 /* настройки страницы */
 
-/* тонкая белая линия снизу меню на всех страницах */
 .mainblock1::before,
 .aboutblock1::before,
 .shopblock1::before,
-.eventsblock1::before {
+.eventsblock1::before 
+.mainblock1::before {
   content: '';
   position: absolute;
   top: 6.39vw;
@@ -51,9 +49,6 @@ body {
   z-index: 0;
 }
 
-/* ===== АНИМАЦИЯ ПЕРВОГО ЭКРАНА ===== */
-
-/* буквы — шторка снизу */
 .forma_bykvi {
   clip-path: inset(0 0 100% 0);
   transition: clip-path 1s ease, transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -67,7 +62,6 @@ body {
   transform: scale(1.04);
 }
 
-/* квадратики — шторка снизу */
 .kvadratiki_main {
   clip-path: inset(0 0 100% 0);
   transition: clip-path 0.9s ease;
@@ -78,7 +72,6 @@ body {
   clip-path: inset(0 0 0% 0);
 }
 
-/* текст — появление снизу */
 .text_main\.16 {
   mix-blend-mode: difference;
   z-index: 1;
@@ -91,7 +84,6 @@ body {
   transform: translateY(0);
 }
 
-/* кнопка — появление снизу */
 .knopa_main\.18 {
   mix-blend-mode: difference;
   z-index: 1;
@@ -351,7 +343,6 @@ body {
   z-index: 2;
 }
 
-/* screen blending для всех декор-изображений */
 [class^="decor_"] { mix-blend-mode: lighten; }
 
 /* большой левый декор */

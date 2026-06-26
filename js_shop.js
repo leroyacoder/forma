@@ -1,5 +1,3 @@
-// анимация первого экрана магазина
-
 (function () {
 
   var bykvi   = document.querySelector('.shop_bykvi');
@@ -7,7 +5,6 @@
   var txt     = document.getElementsByClassName('text_shop.16')[0];
   var knopa   = document.getElementsByClassName('knopa_shop.18')[0];
 
-  // парение букв shop_bykvi
   if (bykvi) {
     (function () {
       var phY = 0.4, phX = 1.2, phR = 0.8;
@@ -24,17 +21,13 @@
     })();
   }
 
-  // анимация появления при загрузке страницы
   function runEntrance() {
-    // буквы — сразу
     if (bykvi) setTimeout(function () { bykvi.classList.add('shop1-in'); }, 100);
-    // пауза ~900ms, потом остальные элементы
     if (kv)    setTimeout(function () { kv.classList.add('shop1-in'); if (window.playSound) window.playSound('plashki'); }, 1100);
     if (txt)   setTimeout(function () { txt.classList.add('shop1-in'); if (window.playSound) window.playSound('tekst'); }, 1500);
     if (knopa) setTimeout(function () { knopa.classList.add('shop1-in'); }, 1800);
   }
 
-  // запускаем после загрузки DOM
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', runEntrance);
   } else {
@@ -43,7 +36,7 @@
 
 })();
 
-// буквы магазин — клик/ховер/звуки
+// буквы магазин 
 
 (function () {
   var bykvi = document.querySelector('.shop_bykvi');
@@ -210,7 +203,7 @@
     if (window.podvalAnimate) window.podvalAnimate();
   }
 
-  // клик открывает попап
+  // клик
 
   Object.keys(cardToPopup).forEach(function (n) {
     var num = parseInt(n);
@@ -258,7 +251,7 @@
 
 })();
 
-// ховер для появления названий
+// ховер 
 
 (function () {
 
@@ -305,7 +298,7 @@
 
 })();
 
-// парение фото в попапе
+// парение фото 
 
 (function () {
 
@@ -323,8 +316,6 @@
   tick();
 
 })();
-
-// кнопка корзины на 404
 
 (function () {
 

@@ -1,5 +1,3 @@
-/* ─── страница о нас ─────────────────────────────────────────────────────── */
-
 body.about-page {
   background: #FAF9F9;
 }
@@ -182,8 +180,6 @@ body.about-page {
   transform: translateY(0);
 }
 
-/* убираем дефолтную обводку со всех ссылок на странице */
-
 .about-page a {
   border: none;
   outline: none;
@@ -233,12 +229,6 @@ body.about-page {
 .knopa_about\.18:hover::after {
   width: 100%;
 }
-
-/* ─── скрываем неготовые элементы ───────────────────────────────────────── */
-
-/* подвал */
-
-/* ─── подвал страницы о нас (инверсия главной: белое → чёрное) ──────────── */
 
 .aboutpodval {
   position: relative;
@@ -397,26 +387,12 @@ body.about-page {
   color: #ffffff;
 }
 
-/* разделы r2–r8 скрываются через JS (.about-section без .active имеет opacity:0) */
-
-/* обе стрелки управляются через JS (.hidden класс) */
-
-/* ─── блок 2 — галерея ───────────────────────────────────────────────────── */
-
 .aboutblock2 {
   position: relative;
   width: 100%;
   background: #FAF9F9;
   padding-top: 15vw;
 }
-
-/* общие стили для всех изображений галереи
-   ширина страницы: 38vw
-   высота (пропорция A4): 38 * √2 = 53.74vw
-   зазор между страницами: 1.39vw (~20px на 1440px)
-   разворот по центру: (100 - 38 - 1.39 - 38) / 2 = 11.3vw от края
-   шаг между разворотами: 53.74 + 1.39 = 55.13vw
-*/
 
 [class^="page"] {
   position: absolute;
@@ -425,21 +401,23 @@ body.about-page {
   object-fit: cover;
 }
 
-/* левая колонка (нечётные страницы) */
-[class^="page1_"]  { left: 11.3vw; top: 0; }
-[class^="page3_"]  { left: 11.3vw; top: 55.13vw; }
-[class^="page5_"]  { left: 11.3vw; top: 110.26vw; }
-[class^="page7_"]  { left: 11.3vw; top: 165.39vw; }
-[class^="page9_"]  { left: 11.3vw; top: 220.52vw; }
-[class^="page11_"] { left: 11.3vw; top: 275.65vw; }
+img[class^="page1_r"]  { left: 11.3vw; top: 10vw; }
+img[class^="page2_r"]  { left: 50.69vw; top: 10vw; }
 
-/* правая колонка (чётные страницы) */
-[class^="page2_"]  { left: 50.69vw; top: 0; }
-[class^="page4_"]  { left: 50.69vw; top: 55.13vw; }
-[class^="page6_"]  { left: 50.69vw; top: 110.26vw; }
-[class^="page8_"]  { left: 50.69vw; top: 165.39vw; }
-[class^="page10_"] { left: 50.69vw; top: 220.52vw; }
-[class^="page12_"] { left: 50.69vw; top: 275.65vw; }
+img[class^="page3_r"]  { left: 11.3vw; top: 65.13vw; }
+img[class^="page4_r"]  { left: 50.69vw; top: 65.13vw; }
+
+img[class^="page5_r"]  { left: 11.3vw; top: 120.26vw; }
+img[class^="page6_r"]  { left: 50.69vw; top: 120.26vw; }
+
+img[class^="page7_r"]  { left: 11.3vw; top: 175.39vw; }
+img[class^="page8_r"]  { left: 50.69vw; top: 175.39vw; }
+
+img[class^="page9_r"]  { left: 11.3vw; top: 230.52vw; }
+img[class^="page10_r"] { left: 50.69vw; top: 230.52vw; }
+
+img[class^="page11_r"] { left: 11.3vw; top: 285.65vw; }
+img[class^="page12_r"] { left: 50.69vw; top: 285.65vw; }
 
 /* стрелки */
 
@@ -474,8 +452,6 @@ body.about-page {
 .about-section.active {
   pointer-events: auto;
 }
-
-/* ─── анимация появления изображений при скролле ─────────────────────────── */
 
 .about-section img {
   transition: clip-path 0.9s cubic-bezier(0.25, 0.1, 0.25, 1),

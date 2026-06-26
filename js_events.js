@@ -39,7 +39,7 @@
 
 })();
 
-// буквы мероприятия — клик/ховер/звуки
+// буквы мероприятия 
 
 (function () {
   var bykvi = document.querySelector('.events_bykvi');
@@ -54,7 +54,6 @@
   });
 })();
 
-// кнопка [ ПРИЙТИ В ГОСТИ ] — скролл к следующему блоку
 
 (function () {
   var btn = document.querySelector('.knopa_events\\.18');
@@ -183,7 +182,6 @@
   var txt   = document.getElementsByClassName('text_events.16')[0];
   var knopa = document.getElementsByClassName('knopa_events.18')[0];
 
-  // парение букв — идентичные параметры как у shop_bykvi
   if (bykvi) {
     (function () {
       var phY = 0.4, phX = 1.2, phR = 0.8;
@@ -200,7 +198,6 @@
     })();
   }
 
-  // появление при загрузке — те же задержки что и на shop
   function runEntrance() {
     if (bykvi) setTimeout(function () { bykvi.classList.add('events1-in'); }, 100);
     if (kv)    setTimeout(function () { kv.classList.add('events1-in'); if (window.playSound) window.playSound('plashki'); }, 400);
@@ -216,9 +213,6 @@
 
 })();
 
-
-// кнопка "прийти в гости" — скролл к мероприятиям
-
 (function () {
   var btn    = document.querySelector('.knopa_events\\.18');
   var target = document.querySelector('.eventsblock2');
@@ -231,9 +225,6 @@
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 })();
-
-
-// навигация меню и звук ховера
 
 (function () {
 
@@ -265,9 +256,6 @@
 
 })();
 
-
-// попап — открытие, переход и закрытие
-
 (function () {
 
   var overlay  = document.getElementById('popupOverlay');
@@ -279,7 +267,6 @@
 
   if (!overlay) return;
 
-  // разблокировка кнопки отправки при вводе
   if (emailInput && knopaSend) {
     emailInput.addEventListener('input', function () {
       if (emailInput.value.trim().length > 0) {
@@ -302,14 +289,12 @@
         popup1.style.transform = '';
       });
     });
-    // сбросить инпут и кнопку
     if (emailInput) emailInput.value = '';
     if (knopaSend) knopaSend.classList.remove('active');
   }
 
   function switchToPopup2() {
     if (!emailInput || emailInput.value.trim().length === 0) return;
-    // скрыть попап 1
     popup1.style.opacity = '0';
     popup1.style.transform = 'translateY(-1.5vw)';
     popup1.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
@@ -331,7 +316,6 @@
     popup2.classList.remove('popup2-visible');
     setTimeout(function () {
       overlay.style.display = 'none';
-      // сбросить состояние popup1
       popup1.style.display = '';
       popup1.style.opacity = '';
       popup1.style.transform = '';
@@ -341,10 +325,8 @@
     }, 400);
   }
 
-  // сначала скрыть popup2
   popup2.style.display = 'none';
 
-  // кнопки «оставить заявку»
   var knopas = [
     document.getElementsByClassName('knopa_event1.32')[0],
     document.getElementsByClassName('knopa_event2.32')[0],
@@ -358,7 +340,6 @@
     });
   });
 
-  // клик на афишу — открывает попап
   ['.event1', '.event2', '.event3'].forEach(function (sel) {
     var img = document.querySelector(sel);
     if (!img) return;
@@ -368,12 +349,10 @@
     });
   });
 
-  // отправить
   if (knopaSend) {
     knopaSend.addEventListener('click', switchToPopup2);
   }
 
-  // вернуться к мероприятиям
   if (knopaBack) {
     knopaBack.addEventListener('mouseenter', function () {
       if (window.playSound) window.playSound('hover');
@@ -383,8 +362,6 @@
       closePopup();
     });
   }
-
-  // закрыть кликом по фону
   overlay.addEventListener('click', function (e) {
     if (e.target === overlay) {
       if (window.playSound) window.playSound('perehod');

@@ -1,7 +1,3 @@
-/* ─── страница 404 ────────────────────────────────────────────────────────── */
-
-/* рамка меню */
-
 /* рамка меню */
 
 .ramka_menu_white_404 {
@@ -47,8 +43,6 @@ body.page-404 .mainblock1 .text_meny2:nth-child(7) {
   text-align: center;
 }
 
-/* сброс overflow для 404 — overflow:hidden на mainblock1 ломает ширину блока */
-
 body.page-404 .mainblock1 {
   overflow: visible;
 }
@@ -57,12 +51,11 @@ body.page-404 .mainblock1 {
 
 .main404 {
   position: absolute;
-  width: 131.11vw;
-  height: 140.56vw;
-  left: -18.96vw;
-  top: -15.42vw;
-  object-fit: fill;
-  clip-path: inset(15.42vw 12.15vw 68.89vw 18.96vw);
+  width: 100vw;
+  height: 60vw;
+  left: 0vw;
+  top: 0vw;
+  object-fit: cover;
 }
 
 /* буквы ошибки */
@@ -72,7 +65,7 @@ body.page-404 .mainblock1 {
   width: 77.59vw;
   height: 24.16vw;
   left: 12.36vw;
-  top: 18.82vw;
+  top: 10vw;
   object-fit: contain;
   clip-path: inset(0 0 100% 0);
   transition: clip-path 1s ease, transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);

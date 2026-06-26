@@ -37,7 +37,7 @@
   }
 })();
 
-// буквы форма — клик/ховер/звуки
+// буквы форма 
 (function () {
   var bykvi = document.querySelector('.forma_bykvi');
   var target = document.querySelector('.lipkiy-wrapper');
@@ -51,7 +51,7 @@
   });
 })();
 
-// кнопка "узнать наше видение" — скролл к следующему блоку
+
 (function () {
   var btn = document.querySelector('.knopa_main\\.18');
   var target = document.querySelector('.lipkiy-wrapper');
@@ -126,26 +126,20 @@
 
   var played = [false, false, false];
 
-  // Текущий прогресс скролла внутри wrapper (0→1)
+
   function getProgress() {
     var rect = wrapper.getBoundingClientRect();
     return Math.max(0, Math.min(1, -rect.top / (wrapper.offsetHeight - window.innerHeight)));
   }
 
-  // Локальный прогресс блока i внутри его 1/3 диапазона (0→1)
-  // Блок 0: global 0.000→0.333  Блок 1: 0.333→0.667  Блок 2: 0.667→1.000
-  // Это гарантирует строгую последовательность: блок i+1 начинается
-  // ровно тогда, когда блок i заканчивается.
   function getLocal(i) {
     return Math.max(0, Math.min(1, (getProgress() - i / 3) * 3));
   }
 
-  // Кубическая ease-in-out: медленный старт, медленный конец
   function ease(t) {
     return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
   }
 
-  // Значение 0→1, пока loc идёт от a до b (с easing)
   function ph(loc, a, b) {
     if (loc <= a) return 0;
     if (loc >= b) return 1;
@@ -157,13 +151,6 @@
 
     for (var i = 0; i < 3; i++) {
       var loc = getLocal(i);
-
-      // Фазы (доли от 0 до 1 внутри блока):
-      //  0.00→0.20  — контент появляется с погружением  (fi: 0→1)
-      //  0.20→0.37  — декор выплывает                   (ds: 0→1)
-      //  0.37→0.63  — статика + парение декора
-      //  0.63→0.80  — декор заплывает обратно           (ds: 1→0)
-      //  0.80→1.00  — контент уходит с погружением      (fo: 0→1)
 
       var fi = ph(loc, 0.00, 0.20);
       var fo = ph(loc, 0.80, 1.00);
@@ -187,13 +174,9 @@
       blocks[i].style.opacity       = Math.max(0, vis).toFixed(3);
       blocks[i].style.pointerEvents  = vis > 0.5 ? 'auto' : 'none';
 
-      // ── ПРЕВЬЮ — эффект погружения: выплывает снизу из глубины ──
       if (previews[i]) {
-        // scale: 1.12→1.0 при появлении (выходит из глубины), 1.0→0.93 при уходе
         var pvScale = 1 + (1 - fi) * 0.12 - fo * 0.07;
-        // blur: 18px→0 при появлении, 0→12px при уходе
         var pvBlur  = (1 - fi) * 18 + fo * 12;
-        // clipPath — шторка снизу вверх при появлении, сверху при уходе
         previews[i].style.clipPath =
           'inset(' + (fo * 100).toFixed(1) + '% 0 ' + ((1 - fi) * 100).toFixed(1) + '% 0)';
         previews[i].style.filter = 'blur(' + pvBlur.toFixed(1) + 'px)';
@@ -205,7 +188,7 @@
         }
       }
 
-      // ── КВАДРАТИКИ — чуть позже превью, те же глубина и масштаб ──
+
       if (squares[i]) {
         var sqScale = 1 + (1 - fi) * 0.09 - fo * 0.05;
         squares[i].style.clipPath =
@@ -215,7 +198,7 @@
         squares[i].style.opacity = Math.max(0, vis).toFixed(3);
       }
 
-      // ── ТЕКСТ — самый медленный, с глубоким blur ──
+    
       if (texts[i]) {
         var txScale = 1 + (1 - fi) * 0.06 - fo * 0.04;
         var txBlur  = (1 - fi) * 14 + fo * 9;
@@ -225,7 +208,7 @@
         texts[i].style.opacity = Math.max(0, vis).toFixed(3);
       }
 
-      // ── ДЕКОР — позиционирование через scroll (парение — отдельный IIFE) ──
+      
       decors[i].forEach(function (d, j) {
         if (!d.el) return;
         var r  = rotations[i][j];
@@ -331,21 +314,21 @@
     document.querySelector('.decor_ivents4'),
   ];
 
-  // Фазы Y (основное парение)
+
   var phY = [0,    1.4,  2.1,  0.7,  0.5,  1.8,  0.3,  2.4,  1.1,  0.2,  1.9,  0.8];
-  // Фазы X (горизонтальное смещение — другая частота)
+
   var phX = [0.8,  2.2,  0.3,  1.6,  1.1,  0.5,  2.0,  0.9,  1.7,  2.5,  0.4,  1.3];
-  // Фазы вращения (самая медленная)
+
   var phR = [1.5,  0.4,  1.9,  0.2,  2.3,  1.0,  0.7,  1.8,  0.3,  1.4,  2.1,  0.6];
 
   function tick() {
     var t = Date.now() * 0.00072;
     all.forEach(function (el, i) {
       if (!el) return;
-      var spd = 0.75 + i * 0.08;                              // у каждого своя скорость
-      var y   = Math.sin(t * spd            + phY[i]) * 24;  // верт. парение ±24px
-      var x   = Math.cos(t * (spd * 0.62)  + phX[i]) * 10;  // гориз. дрейф ±10px
-      var rot = Math.sin(t * (spd * 0.38)  + phR[i]) * 5;   // вращение ±5°
+      var spd = 0.75 + i * 0.08;                              
+      var y   = Math.sin(t * spd            + phY[i]) * 24;  
+      var x   = Math.cos(t * (spd * 0.62)  + phX[i]) * 10;  
+      var rot = Math.sin(t * (spd * 0.38)  + phR[i]) * 5;   
       el.style.translate = x.toFixed(2) + 'px ' + y.toFixed(2) + 'px';
       el.style.rotate    = rot.toFixed(2) + 'deg';
     });
@@ -357,10 +340,8 @@
 })();
 
 
-// анимация рамок и текста подвала
-
 (function () {
-  // используем последний mainpodval на странице (на shop.html их два)
+
   var allPodval = document.querySelectorAll('.mainpodval');
   if (!allPodval.length) return;
   var section = allPodval[allPodval.length - 1];

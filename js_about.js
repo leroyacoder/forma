@@ -39,7 +39,7 @@
 
 })();
 
-// буквы о нас — клик/ховер/звуки
+// буквы о нас 
 
 (function () {
   var bykvi = document.querySelector('.about_bykvi');
@@ -54,7 +54,7 @@
   });
 })();
 
-// кнопка [ ПРОЧИТАТЬ КНИГУ ] — скролл к следующему блоку
+// скролл к следующему блоку
 
 (function () {
   var btn = document.querySelector('.knopa_about\\.18');
@@ -207,7 +207,7 @@
         var target = rect.top < window.innerHeight * threshold ? 1 : 0;
 
         var wasBelowLate = p < 0.97;
-        p += (target - p) * 0.12;
+        p += (target - p) * 0.30;
         if (p > 0.999) {
           p = 1;
           imgDone.add(img);
@@ -235,7 +235,7 @@
       if (!arrowLStart) arrowLStart = Date.now();
       var rect = arrowLeft.getBoundingClientRect();
       var t = (Date.now() - arrowLStart > 800) && rect.top < window.innerHeight * 0.88 ? 1 : 0;
-      arrowLProg += (t - arrowLProg) * 0.06;
+      arrowLProg += (t - arrowLProg) * 0.20;
       if (arrowLProg > 0.999) { arrowLProg = 1; arrowLDone = true; }
       var c = ((1 - arrowLProg) * 100).toFixed(1);
       var ty2 = ((1 - arrowLProg) * 60).toFixed(1);
@@ -247,7 +247,7 @@
       if (!arrowRStart) arrowRStart = Date.now();
       var rect2 = arrowRight.getBoundingClientRect();
       var t2 = (Date.now() - arrowRStart > 800) && rect2.top < window.innerHeight * 0.88 ? 1 : 0;
-      arrowRProg += (t2 - arrowRProg) * 0.06;
+      arrowRProg += (t2 - arrowRProg) * 0.20;
       if (arrowRProg > 0.999) { arrowRProg = 1; arrowRDone = true; }
       var c2 = ((1 - arrowRProg) * 100).toFixed(1);
       var ty3 = ((1 - arrowRProg) * 60).toFixed(1);
@@ -259,8 +259,6 @@
   }
 
   requestAnimationFrame(tickImages);
-
-  // высота блока и позиция стрелок
 
   function updateHeight() {
     var active = sections[current];
@@ -279,7 +277,6 @@
     if (arrowLeft)  arrowLeft.style.top  = (minTop + imgH / 2) + 'px';
     if (arrowRight) arrowRight.style.top = (maxBottom - imgH / 2) + 'px';
 
-    // триггеры для задержки анимации стрелок
     var imgs = active.querySelectorAll('img');
     triggerFirst = imgs[0] || null;
     triggerLast  = imgs[imgs.length - 1] || null;
@@ -301,16 +298,13 @@
 
     if (window.playSound) window.playSound('perehod');
 
-    // шаг 1: появляется perehod1 (тёмный блум)
     if (p1) { p1.style.pointerEvents = 'auto'; p1.style.opacity = '1'; }
 
     setTimeout(function () {
-      // шаг 2: crossfade perehod1 → perehod2 (светлый пик)
       if (p1) p1.style.opacity = '0';
       if (p2) { p2.style.pointerEvents = 'auto'; p2.style.opacity = '1'; }
 
       setTimeout(function () {
-        // пик — переключаем секцию
         var prev = sections[current];
         resetSection(prev);
         prev.classList.remove('active');
@@ -366,7 +360,7 @@
 })();
 
 
-// анимация первого экрана — идентично shop
+// анимация первого экрана 
 
 (function () {
   var bykvi = document.querySelector('.about_bykvi');
@@ -391,8 +385,6 @@
     var y   = Math.sin(t * 0.75) * 22;
     var x   = Math.cos(t * 0.47) *  9;
     var rot = Math.sin(t * 0.31) *  3.5;
-    // используем translate/rotate (CSS Individual Transform Properties)
-    // они не конфликтуют с transform: scale() из анимации появления
     letters.style.translate = x.toFixed(1) + 'px ' + y.toFixed(1) + 'px';
     letters.style.rotate    = rot.toFixed(2) + 'deg';
     requestAnimationFrame(tick);

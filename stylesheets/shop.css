@@ -1,4 +1,4 @@
-/* анимационные названия товаров — появляются при наведении */
+
 
 [class^="text_shop_ani"] {
   position: absolute;
@@ -56,7 +56,6 @@
   z-index: 0;
 }
 
-/* blend mode difference на элементах первого экрана */
 .kvadratiki_shop,
 .text_shop\.16,
 .knopa_shop\.18 {
@@ -74,9 +73,7 @@
   transform: scale(1.04);
 }
 
-/* ===== АНИМАЦИЯ ПЕРВОГО ЭКРАНА ===== */
 
-/* квадратики — шторка снизу */
 .kvadratiki_shop {
   clip-path: inset(0 0 100% 0);
   transition: clip-path 0.9s ease;
@@ -85,7 +82,6 @@
   clip-path: inset(0 0 0% 0);
 }
 
-/* текст и кнопка — появление снизу */
 .text_shop\.16,
 .knopa_shop\.18 {
   opacity: 0;
@@ -101,7 +97,6 @@
   transform: translateY(0);
 }
 
-/* буквы — появление через blur как превью на главной */
 .shop_bykvi {
   opacity: 0;
   filter: blur(18px) brightness(0) invert(1);
@@ -1180,7 +1175,6 @@
   color: #FFFFFF;
 }
 
-/* описание — абзацы с отступами */
 .popup-pdesc {
   position: absolute;
   left: 3.26vw;
@@ -1229,9 +1223,6 @@
   width: 100%;
 }
 
-/* ===== АНИМАЦИЯ ПОЯВЛЕНИЯ ПОПАПА ===== */
-
-/* начальные состояния */
 .popup-page .ramka_shop_popup {
   clip-path: inset(0 0 100% 0);
   transition: clip-path 0.9s ease;
@@ -1250,7 +1241,6 @@
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* активные состояния — добавляются JS при открытии */
 .popup-active .popup-page .ramka_shop_popup {
   clip-path: inset(0 0 0% 0);
 }
@@ -1265,7 +1255,6 @@
   opacity: 0.7; transform: translateY(0); transition-delay: 1.7s;
 }
 
-/* ховер на фото — масштаб через scale property (не конфликтует с transform) */
 .popup-photo {
   scale: 1;
   transition: clip-path 0.9s ease 0.6s, scale 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);

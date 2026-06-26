@@ -483,12 +483,6 @@
   cursor: pointer;
 }
 
-/* ─── АНИМАЦИИ ────────────────────────────────────────────────────────────── */
-
-/* буквы — без анимации появления */
-
-/* начальное состояние — постеры (clipPath задаётся JS) */
-
 .event1,
 .event2,
 .event3 {
@@ -530,7 +524,7 @@
   transform: translateY(0) !important;
 }
 
-/* подчёркивание кнопок оставить заявку */
+/* подчёркивание кнопок  */
 
 .knopa_event1\.32,
 .knopa_event2\.32,
@@ -557,8 +551,6 @@
   width: 100%;
 }
 
-/* мероприятия в подвале — переопределение для events страницы */
-
 .mainpodval .text_podval_ramka1_3\.18:nth-child(7) {
   width: 9.79vw;
   height: 1.53vw;
@@ -578,7 +570,7 @@
   cursor: pointer;
 }
 
-/* попап — оверлей */
+/* попап */
 
 .popup-overlay {
   display: none;
@@ -596,7 +588,7 @@
   background: rgba(0, 0, 0, 0.6);
 }
 
-/* попап — контейнер */
+/* попап */
 
 .popup1 {
   position: relative;
@@ -721,7 +713,7 @@
   pointer-events: auto;
 }
 
-/* попап 2 — контейнер */
+/* попап 2*/
 
 .popup2 {
   position: absolute;
